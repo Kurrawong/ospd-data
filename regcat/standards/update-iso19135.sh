@@ -1,0 +1,1 @@
+kurra file merge ~/work/iso/ontologies/HarmonizedOntology/outputs/ISO19135-1/*.ttl iso19135-metadata.ttl -d iso19135.ttl

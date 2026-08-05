@@ -1,0 +1,25 @@
+PREFIX ont: <https://def.isotc211.org/def/ont/19135-1>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+ont:
+    a owl:Ontology ;
+    schema:name "ISO19135-1 Ontology" ;
+    schema:description """An OWL Ontology version of the data model in ISO19135-1:2015 - Geographic information — Procedures for item registration.
+
+ISO 19135-1:2015 specifies procedures to be followed in establishing, maintaining, and publishing registers of unique, unambiguous, and permanent identifiers and meanings that are assigned to items of geographic information. In order to accomplish this purpose, ISO 19135-1:2015 specifies elements that are necessary to manage the registration of these items.""" ;
+    schema:dateCreated "2026-08-05"^^xsd:date ;
+    schema:dateModified "2026-08-05"^^xsd:date ;
+    schema:creator <https://def.isotc211.org/org/tc211> ;
+    schema:publisher <https://def.isotc211.org/org/tc211> ;
+    schema:license <https://rdflicense.linkeddata.es/rdflicense/cc-by4.0> ;
+.
+
+<https://def.isotc211.org/org/tc211>
+    a schema:Organization ;
+    schema:description "The International Organization for Standardization's Technical Committee on \"Geographic information/Geomatics\", charged with standardization in the field of digital geographic information" ;
+    schema:name "ISO's Technical Committee 211" ;
+    schema:url "https://www.iso.org/committee/54904.html"^^xsd:anyURI ;
+.
