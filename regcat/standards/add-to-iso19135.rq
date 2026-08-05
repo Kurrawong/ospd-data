@@ -1,0 +1,16 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT {
+    <https://def.isotc211.org/def/ont/19135-1> rdfs:member ?e .
+
+    ?e skos:historyNote "Extracted from the ISO19135-1 UML model" .
+} WHERE {
+    VALUES ?class {
+        rdf:Property
+        owl:Class
+    }
+
+    ?e a ?class .
+}
