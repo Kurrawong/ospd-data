@@ -1,0 +1,10 @@
+PREFIX demo: <http://prez.demo/>
+PREFIX ex: <http://example.org/>
+PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
+PREFIX schema: <https://schema.org/>
+
+demo:cro-geoac-01
+    a ex:GeoprocessingActivity ;
+    schema:name "Croatian MEPGT Geoprocessing Activity 1" ;
+    schema:status istatus:stable ;
+.

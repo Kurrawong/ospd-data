@@ -1,0 +1,190 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prez: <https://prez.dev/>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX time: <http://www.w3.org/2006/time#>
+
+dcterms:conformsTo
+    schema:name "Conforms To" ;
+.
+
+dcterms:created
+    schema:name "Date Created" ;
+.
+
+dcterms:creator
+    schema:name "Creator" ;
+.
+
+dcterms:hasPart
+    schema:name "Has Part" ;
+.
+
+dcterms:modified
+    schema:name "Date Modified" ;
+.
+
+dcterms:publisher
+    schema:name "Publisher" ;
+.
+
+<http://resource.geosciml.org/ontology/timescale/gts#rank>
+    schema:name "temporal element rank" ;
+.
+
+<http://resource.geosciml.org/ontology/timescale/gts#ratifiedGSSP>
+    schema:name "ratified GSSP" ;
+.
+
+rdf:type
+    schema:name "type" ;
+.
+
+owl:versionIRI
+    schema:name "version IRI" ;
+.
+
+owl:versionInfo
+    schema:name "version Info" ;
+.
+
+skos:Collection
+    schema:name "Collection" ;
+.
+
+skos:Concept
+    schema:name "Concept" ;
+.
+
+skos:ConceptScheme
+    schema:name "Concept Scheme" ;
+.
+
+skos:altLabel
+    schema:name "alternative label" ;
+.
+
+skos:broader
+    schema:name "has broader" ;
+.
+
+skos:changeNote
+    schema:name "change note" ;
+.
+
+skos:definition
+    schema:name "definition" ;
+.
+
+skos:hasTopConcept
+    schema:name "has top concept" ;
+.
+
+skos:historyNote
+    schema:name "history note" ;
+.
+
+skos:inScheme
+    schema:name "is in scheme" ;
+.
+
+skos:member
+    schema:name "has member" ;
+.
+
+skos:narrower
+    schema:name "has narrower" ;
+.
+
+skos:notation
+    schema:name "notation" ;
+.
+
+skos:note
+    schema:name "note" ;
+.
+
+skos:prefLabel
+    schema:name "preferred label" ;
+.
+
+time:hasBeginning
+    schema:name "has beginning" ;
+.
+
+time:hasEnd
+    schema:name "has end" ;
+.
+
+dcat:Catalog
+    schema:name "Catalog" ;
+.
+
+prof:hasArtifact
+    schema:name "has artifact" ;
+.
+
+prof:hasResource
+    schema:name "has resource" ;
+.
+
+prof:hasRole
+    schema:name "has role" ;
+.
+
+sh:order
+    schema:name "order"@en ;
+.
+
+prez:Manifest
+    schema:name "Manifest" ;
+.
+
+schema:Organization
+    schema:name "Organization" ;
+.
+
+schema:alternateName
+    schema:name "alternate name" ;
+.
+
+schema:author
+    schema:name "author" ;
+.
+
+schema:citation
+    schema:name "citation" ;
+.
+
+schema:color
+    schema:name "color" ;
+.
+
+schema:copyrightHolder
+    schema:name "copyright holder" ;
+.
+
+schema:copyrightNotice
+    schema:name "copyright notice" ;
+.
+
+schema:license
+    schema:name "license" ;
+.
+
+schema:marginOfError
+    schema:name "margin of error" ;
+.
+
+schema:name
+    schema:name "name" ;
+.
+
+schema:url
+    schema:name "url" ;
+.

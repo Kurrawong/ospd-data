@@ -1,0 +1,19 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX demo: <http://prez.demo/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX schema: <https://schema.org/>
+
+demo:cat
+    a dcat:Catalog ;
+    dcterms:hasPart
+        <https://def.isotc211.org/codeset/ItemStatus> ,
+        <https://def.isotc211.org/codeset/RegisterRolesDemo> ;
+    prov:qualifiedAttribution
+        [
+            prov:agent <https://def.isotc211.org/org/tc211> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RegisterRolesDemo/register-owner> ;
+        ] ;
+    schema:author <https://kurrawong.ai> ;
+    schema:name "Vocabularies Catalog" ;
+.

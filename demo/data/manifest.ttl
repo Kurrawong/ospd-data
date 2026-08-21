@@ -1,0 +1,46 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX roles: <https://prez.dev/ManifestResourceRoles/>
+
+[]    a <https://prez.dev/Manifest> ;
+    prof:hasResource 
+        [
+            prof:hasArtifact "geoacs/euro/geoac*.ttl" ;
+            prof:hasRole roles:ResourceData ;
+        ] ,
+        [
+            prof:hasArtifact "_background/*.ttl" ;
+            prof:hasRole roles:CompleteCatalogueAndResourceLabels ;
+        ] ,
+        [
+            prof:hasArtifact "geoacs/euro/cat.ttl" ;
+            prof:hasRole roles:CatalogueData ;
+        ] ,
+        [
+            prof:hasArtifact "vocabs/vocs.ttl" ;
+            prof:hasRole roles:CatalogueData ;
+        ] ,
+        [
+            prof:hasArtifact "geoacs/cro/cat.ttl" ;
+            prof:hasRole roles:CatalogueData ;
+        ] ,
+        [
+            prof:hasArtifact "geoacs/ogc/cat.ttl" ;
+            prof:hasRole roles:CatalogueData ;
+        ] ,
+        [
+            prof:hasArtifact "geoacs/cro/geoac*.ttl" ;
+            prof:hasRole roles:ResourceData ;
+        ] ,
+        [
+            prof:hasArtifact "geoacs/ogc/geoac*.ttl" ;
+            prof:hasRole roles:ResourceData ;
+        ] ,
+        [
+            dcterms:conformsTo <https://linked.data.gov.au/def/vocpub/validator> ;
+            prof:hasArtifact
+                "vocabs/RegisterItemStatus.ttl" ,
+                "vocabs/RegisterRolesDemo.ttl" ;
+            prof:hasRole roles:ResourceData ;
+        ] ;
+.

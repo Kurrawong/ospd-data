@@ -1,0 +1,9 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX ex: <http://example.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+ex:GeoprocessingActivity
+    a rdfs:Class ;
+    rdfs:label "Geoprocessing Activity" ;
+    rdfs:subClassOf dcat:Resource ;
+.
