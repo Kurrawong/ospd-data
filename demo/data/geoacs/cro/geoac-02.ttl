@@ -1,4 +1,4 @@
-PREFIX demo: <http://prez.demo/>
+PREFIX demo: <http://ospd/demo/>
 PREFIX ex: <http://example.org/>
 PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
 PREFIX schema: <https://schema.org/>
@@ -6,5 +6,8 @@ PREFIX schema: <https://schema.org/>
 demo:cro-geoac-02
     a ex:GeoprocessingActivity ;
     schema:name "Croatian MEPGT Geoprocessing Activity 2" ;
-    schema:status istatus:experimental ;
+    schema:status [
+        schema:value istatus:experimental ;
+        schema:memberOf demo:cro-geoacs ;
+    ] ;
 .

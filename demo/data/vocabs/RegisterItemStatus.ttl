@@ -13,7 +13,6 @@ status:retired
     skos:historyNote "Supplied within the original issuance of the code set"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "retired"@en ;
-    skos:topConceptOf cs: ;
     schema:status status:original ;
 .
 
@@ -25,7 +24,6 @@ status:submitted
     skos:historyNote "Supplied within the original issuance of the code set"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "submitted"@en ;
-    skos:topConceptOf cs: ;
     schema:status status:original ;
 .
 
@@ -37,7 +35,6 @@ status:superseded
     skos:historyNote "Supplied within the original issuance of the code set"@en ;
     skos:inScheme cs: ;
     skos:prefLabel "superseded"@en ;
-    skos:topConceptOf cs: ;
     schema:status status:original ;
 .
 

@@ -1,10 +1,13 @@
-PREFIX demo: <http://prez.demo/>
+PREFIX demo: <http://ospd/demo/>
 PREFIX ex: <http://example.org/>
 PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
 PREFIX schema: <https://schema.org/>
 
-demo:euro-geoac-01
+demo:ogc-geoac-01
     a ex:GeoprocessingActivity ;
     schema:name "Euro Standard Geoprocessing Activity 1" ;
-    schema:status istatus:stable ;
+    schema:status [
+        schema:value istatus:stable ;
+        schema:memberOf demo:ogc-geoacs ;
+    ] ;
 .

@@ -1,10 +1,10 @@
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX demo: <http://prez.demo/>
+PREFIX demo: <http://ospd/demo/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX schema: <https://schema.org/>
 
-demo:croa-geoacs
+demo:cro-geoacs
     a dcat:Catalog ;
     dcterms:hasPart
         demo:cro-geoac-01 ,

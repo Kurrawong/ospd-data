@@ -1,15 +1,15 @@
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX demo: <http://prez.demo/>
+PREFIX demo: <http://ospd/demo/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX schema: <https://schema.org/>
 
-demo:ogc-geoacs
+demo:euro-geoacs
     a dcat:Catalog ;
     dcterms:hasPart
-        demo:ogc-geoac-01 ,
-        demo:ogc-geoac-02 ,
-        demo:ogc-geoac-03 ;
+        demo:euro-geoac-01 ,
+        demo:euro-geoac-02 ,
+        demo:euro-geoac-03 ;
     prov:qualifiedAttribution
         [
             prov:agent <https://mepgt> ;
