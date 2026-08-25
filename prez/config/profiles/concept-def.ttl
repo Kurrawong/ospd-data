@@ -13,7 +13,7 @@ exp:ConceptDefProfile
         sh:NodeShape ,
         prez:ObjectProfile ;
     dcterms:description "Displays only definitions for Concepts" ;
-    dcterms:identifier "concept-def"^^xsd:token ;
+    dcterms:identifier "conceptdef"^^xsd:token ;
     dcterms:title "Concept Def" ;
     altr-ext:constrainsClass skos:Concept ;
     altr-ext:hasDefaultResourceFormat "text/anot+turtle" ;

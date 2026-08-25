@@ -6,7 +6,6 @@ PREFIX prez: <https://prez.dev/>
 PREFIX prof: <http://www.w3.org/ns/dx/prof/>
 PREFIX schema: <https://schema.org/>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 exp:GeoAcGov
@@ -15,7 +14,7 @@ exp:GeoAcGov
         sh:NodeShape ,
         prez:ObjectProfile ;
     dcterms:description "Displays only definitions for Concepts" ;
-    dcterms:identifier "concept-def"^^xsd:token ;
+    dcterms:identifier "geoacprov"^^xsd:token ;
     dcterms:title "Geoprocessing Activity Governance Profile" ;
     altr-ext:constrainsClass ex:GeoprocessingActivity ;
     altr-ext:hasDefaultResourceFormat "text/anot+turtle" ;
