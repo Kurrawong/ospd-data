@@ -5,7 +5,7 @@ PREFIX schema: <https://schema.org/>
 
 demo:euro-geoac-03
     a ex:GeoprocessingActivity ;
-    schema:name "OGC Geoprocessing Activity 3" ;
+    schema:name "European Geoprocessing Activity 3" ;
     schema:status [
         schema:value istatus:stable ;
         schema:memberOf demo:euro-geoacs ;
