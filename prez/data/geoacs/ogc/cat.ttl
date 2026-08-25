@@ -4,17 +4,14 @@ PREFIX demo: <http://ospd/demo/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX schema: <https://schema.org/>
 
-demo:euro-geoacs
+demo:ogc-geoacs
     a dcat:Catalog ;
-    dcterms:hasPart
-        demo:euro-geoac-01 ,
-        demo:euro-geoac-02 ,
-        demo:euro-geoac-03 ;
+    dcterms:hasPart demo:ogc-geoac-01 ;
     prov:qualifiedAttribution
         [
-            prov:agent <https://mepgt> ;
+            prov:agent <https://defs.opengis.net/org/ogc> ;
             prov:hadRole <https://def.isotc211.org/codeset/RegisterRolesDemo/register-owner> ;
         ] ;
     schema:author <https://kurrawong.ai> ;
-    schema:name "OGC Geoprocessing Activities Register" ;
+    schema:name "OGC Standard Geoprocessing Activities Register" ;
 .

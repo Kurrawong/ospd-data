@@ -1,88 +1,81 @@
-PREFIX : <https://def.isotc211.org/codeset/RegisterRolesDemo/>
-PREFIX cs: <https://def.isotc211.org/codeset/RegisterRolesDemo>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX regrol: <https://def.isotc211.org/codeset/RegisterRolesDemo>
+PREFIX regrols: <https://def.isotc211.org/codeset/RegisterRolesDemo/>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-:control-body
+regrols:control-body
     a skos:Concept ;
     dcterms:provenance "Defined for the Register Roles vocabulary."@en ;
-    reg:status reg:statusStable ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy regrol: ;
     skos:definition "Makes the technical or content decisions on whether proposed changes are acceptable."@en ;
-    skos:inScheme cs: ;
+    skos:inScheme regrol: ;
     skos:prefLabel "Control Body"@en ;
-    skos:topConceptOf cs: ;
+    skos:topConceptOf regrol: ;
 .
 
-:register-manager
+regrols:register-manager
     a skos:Concept ;
     dcterms:provenance "Defined for the Register Roles vocabulary."@en ;
-    reg:status reg:statusStable ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy regrol: ;
     skos:definition "Runs the register on behalf of the owner: receives and manages proposals, maintains the register content and acts as the administrative point of contact."@en ;
-    skos:inScheme cs: ;
+    skos:inScheme regrol: ;
     skos:prefLabel "Register Manager"@en ;
-    skos:topConceptOf cs: ;
+    skos:topConceptOf regrol: ;
 .
 
-:register-owner
+regrols:register-owner
     a skos:Concept ;
     dcterms:provenance "Defined for the Register Roles vocabulary."@en ;
-    reg:status reg:statusStable ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy regrol: ;
     skos:definition "Ultimate authority for the register: establishes it and has primary responsibility for its management, dissemination and intellectual content."@en ;
-    skos:inScheme cs: ;
+    skos:inScheme regrol: ;
     skos:prefLabel "Register Owner"@en ;
-    skos:topConceptOf cs: ;
+    skos:topConceptOf regrol: ;
 .
 
-:register-user
+regrols:register-user
     a skos:Concept ;
     dcterms:provenance "Defined for the Register Roles vocabulary."@en ;
-    reg:status reg:statusStable ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy regrol: ;
     skos:definition "Accesses the registry to use the contents of one or more registers."@en ;
-    skos:inScheme cs: ;
+    skos:inScheme regrol: ;
     skos:prefLabel "Register User"@en ;
-    skos:topConceptOf cs: ;
+    skos:topConceptOf regrol: ;
 .
 
-:registry-manager
+regrols:registry-manager
     a skos:Concept ;
     dcterms:provenance "Defined for the Register Roles vocabulary."@en ;
-    reg:status reg:statusStable ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy regrol: ;
     skos:definition "Operates the registry, i.e. the information system in which one or more registers are maintained."@en ;
-    skos:inScheme cs: ;
+    skos:inScheme regrol: ;
     skos:prefLabel "Registry Manager"@en ;
-    skos:topConceptOf cs: ;
+    skos:topConceptOf regrol: ;
 .
 
-:submitting-organization
+regrols:submitting-organization
     a skos:Concept ;
     dcterms:provenance "Defined for the Register Roles vocabulary."@en ;
-    reg:status reg:statusStable ;
-    rdfs:isDefinedBy cs: ;
+    rdfs:isDefinedBy regrol: ;
     skos:definition "An organisation authorised or qualified to propose additions or other changes to register content."@en ;
-    skos:inScheme cs: ;
+    skos:inScheme regrol: ;
     skos:prefLabel "Submitting Organization"@en ;
-    skos:topConceptOf cs: ;
+    skos:topConceptOf regrol: ;
 .
 
-cs:
+regrol:
     a skos:ConceptScheme ;
     skos:definition "Roles performed by organisations and other parties in the governance, management, operation and use of registers and registries."@en ;
     skos:hasTopConcept
-        :control-body ,
-        :register-manager ,
-        :register-owner ,
-        :register-user ,
-        :registry-manager ,
-        :submitting-organization ;
+        regrols:control-body ,
+        regrols:register-manager ,
+        regrols:register-owner ,
+        regrols:register-user ,
+        regrols:registry-manager ,
+        regrols:submitting-organization ;
     skos:historyNote "This vocabulary is expressed for the first time here"@en ;
     skos:prefLabel "Register Roles"@en ;
     schema:creator <https://def.isotc211.org/org/tc211> ;

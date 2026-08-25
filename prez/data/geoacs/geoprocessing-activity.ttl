@@ -7,3 +7,9 @@ ex:GeoprocessingActivity
     rdfs:label "Geoprocessing Activity" ;
     rdfs:subClassOf dcat:Resource ;
 .
+
+ex:TopLevelCatalog
+    a rdfs:Class ;
+    rdfs:label "Top-level Catalogue" ;
+    rdfs:subClassOf dcat:Catalog ;
+.
