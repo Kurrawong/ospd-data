@@ -2,6 +2,7 @@ PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX ex: <http://example.org/>
 PREFIX ont: <https://prez.dev/ont/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
@@ -92,6 +93,10 @@ ex:shape-R0-HL1
                 ]
                 
                 [
+                    sh:class owl:Ontology ;
+                ]
+                
+                [
                     sh:class schema:DataCatalog ;
                 ]
                 
@@ -121,7 +126,8 @@ ex:shape-R0-HL2
         ] ;
     sh:targetClass
         skos:ConceptScheme ,
-        dcat:Catalog ;
+        dcat:Catalog ,
+        owl:Ontology ;
     ont:hierarchyLevel 2 ;
 .
 
@@ -177,7 +183,7 @@ ex:shape-R0-HL3-1
 
 ex:shape-R0-HL3-activity
     a sh:NodeShape ;
-    sh:property
+    sh:property 
         [
             sh:class dcat:Catalog ;
             sh:path
@@ -188,9 +194,11 @@ ex:shape-R0-HL3-activity
         [
             sh:class ex:TopLevelCatalog ;
             sh:path (
+                
                 [
                     sh:inversePath dcterms:hasPart ;
                 ]
+                
                 [
                     sh:inversePath dcterms:hasPart ;
                 ]

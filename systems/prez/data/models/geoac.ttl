@@ -1,1 +1,1 @@
-models/geoac/geoac.ttl
+../../../../models/geoac/geoac.ttl

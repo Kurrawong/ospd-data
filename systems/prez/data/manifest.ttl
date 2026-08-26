@@ -57,6 +57,10 @@ PREFIX roles: <https://prez.dev/ManifestResourceRoles/>
             prof:hasRole roles:CatalogueData ;
         ] ,
         [
+            prof:hasArtifact "geoacs/ogc/_cat.ttl" ;
+            prof:hasRole roles:CatalogueData ;
+        ] ,
+        [
             prof:hasArtifact "models/_cat.ttl" ;
             prof:hasRole roles:CatalogueData ;
         ] ;

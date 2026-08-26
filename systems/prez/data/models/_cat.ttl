@@ -10,8 +10,8 @@ demo:models
         dcat:Catalog ,
         ex:TopLevelCatalog ;
     dcterms:hasPart
-        <https://def.isotc211.org/codeset/ItemStatus> ,
-        <https://def.isotc211.org/codeset/RegisterRolesDemo> ;
+        <http://example.org/geoac> ,
+        <http://example.org/regcat> ;
     prov:qualifiedAttribution
         [
             prov:agent <https://defs.opengis.net/org/ogc> ;
