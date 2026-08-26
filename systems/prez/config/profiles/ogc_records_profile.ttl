@@ -23,12 +23,7 @@ prez:OGCRecordsProfile
     dcterms:title "OGC Profile" ;
     altr-ext:constrainsClass prez:CatPrez ;
     altr-ext:hasDefaultResourceFormat "text/anot+turtle" ;
-    altr-ext:hasNodeShape 
-        [
-            a sh:NodeShape ;
-            altr-ext:hasDefaultProfile exp:ConceptDefProfile ;
-            sh:targetClass skos:Concept ;
-        ] ,
+    altr-ext:hasNodeShape
         [
             a sh:NodeShape ;
             altr-ext:hasDefaultProfile exp:GeoAcDef ;
@@ -53,6 +48,7 @@ prez:OGCRecordsProfile
             a sh:NodeShape ;
             altr-ext:hasDefaultProfile prez:OGCItemProfile ;
             sh:targetClass
+                skos:Concept ,
                 rdf:Resource ,
                 dcat:Catalog ,
                 dcat:Resource ;
