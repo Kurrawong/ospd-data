@@ -6,11 +6,6 @@ PREFIX schema: <https://schema.org/>
 
 demo:ogc-geoacs
     a dcat:Catalog ;
-    dcterms:hasPart
-        demo:buffer ,
-        demo:cloud-removal ,
-        demo:waterbody-detection ,
-        demo:dissolve ;
     prov:qualifiedAttribution
         [
             prov:agent <https://defs.opengis.net/org/ogc> ;
@@ -18,4 +13,5 @@ demo:ogc-geoacs
         ] ;
     schema:author <https://kurrawong.ai> ;
     schema:name "OGC Standard Geoprocessing Activities Register" ;
+    dcterms:isPartOf demo:geoacs ;
 .

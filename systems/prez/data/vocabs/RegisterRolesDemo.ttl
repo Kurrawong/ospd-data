@@ -1,4 +1,5 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX demo: <http://ospd/demo/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX regrol: <https://def.isotc211.org/codeset/RegisterRolesDemo>
 PREFIX regrols: <https://def.isotc211.org/codeset/RegisterRolesDemo/>
@@ -83,4 +84,5 @@ regrol:
     schema:dateModified "2026-08-21"^^xsd:date ;
     schema:license <https://creativecommons.org/licenses/by/4.0/> ;
     schema:publisher <https://def.isotc211.org/org/tc211> ;
+    dcterms:isPartOf demo:vocs ;
 .

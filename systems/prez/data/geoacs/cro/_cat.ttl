@@ -6,10 +6,6 @@ PREFIX schema: <https://schema.org/>
 
 demo:cro-geoacs
     a dcat:Catalog ;
-    dcterms:hasPart
-        demo:dissolve-grasslands ,
-        demo:rapid-river-detection ,
-        demo:slow-river-detection ;
     prov:qualifiedAttribution
         [
             prov:agent <https://mepgt> ;
@@ -17,4 +13,5 @@ demo:cro-geoacs
         ] ;
     schema:author <https://kurrawong.ai> ;
     schema:name "Croatian MEPGT Geoprocessing Activities Register" ;
+    dcterms:isPartOf demo:geoacs ;
 .

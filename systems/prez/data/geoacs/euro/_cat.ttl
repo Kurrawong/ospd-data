@@ -6,10 +6,6 @@ PREFIX schema: <https://schema.org/>
 
 demo:euro-geoacs
     a dcat:Catalog ;
-    dcterms:hasPart
-        demo:lake-detection ,
-        demo:river-detection ,
-        demo:ice-detection ;
     prov:qualifiedAttribution
         [
             prov:agent <https://mepgt> ;
@@ -17,4 +13,5 @@ demo:euro-geoacs
         ] ;
     schema:author <https://kurrawong.ai> ;
     schema:name "Euro Geoprocessing Activities Register" ;
+    dcterms:isPartOf demo:geoacs ;
 .

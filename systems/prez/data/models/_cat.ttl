@@ -1,5 +1,4 @@
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX demo: <http://ospd/demo/>
 PREFIX ex: <http://example.org/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
@@ -9,9 +8,6 @@ demo:models
     a
         dcat:Catalog ,
         ex:TopLevelCatalog ;
-    dcterms:hasPart
-        <http://example.org/geoac> ,
-        <http://example.org/regcat> ;
     prov:qualifiedAttribution
         [
             prov:agent <https://defs.opengis.net/org/ogc> ;

@@ -1,4 +1,6 @@
 PREFIX ex: <http://example.org/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX demo: <http://ospd/demo/>
 PREFIX ont: <http://example.org/geoac>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
@@ -24,6 +26,7 @@ ont:
     schema:license <https://spdx.org/licenses/Apache-2.0.html> ;
     schema:name "Geoprocessing Activity Model" ;
     schema:publisher <https://kurrawong.ai> ;
+    dcterms:isPartOf demo:models ;
 .
 
 ex:GeoprocessingActivity

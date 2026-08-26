@@ -108,7 +108,9 @@ ex:shape-R0-HL1
                     sh:class ex:GeoprocessingActivity ;
                 ]
             ) ;
-            sh:path dcterms:hasPart ;
+            sh:path [
+                sh:inversePath dcterms:isPartOf ;
+            ]
         ] ;
     sh:targetClass ex:TopLevelCatalog ;
     ont:hierarchyLevel 1 ;
@@ -119,10 +121,7 @@ ex:shape-R0-HL2
     sh:property
         [
             sh:class dcat:Catalog ;
-            sh:path
-                [
-                    sh:inversePath dcterms:hasPart ;
-                ] ;
+            sh:path dcterms:isPartOf ;
         ] ;
     sh:targetClass
         skos:ConceptScheme ,
@@ -142,10 +141,7 @@ ex:shape-R0-HL3
             sh:class dcat:Catalog ;
             sh:path (
                 skos:inScheme
-                
-                [
-                    sh:inversePath dcterms:hasPart ;
-                ]
+                dcterms:isPartOf
             ) ;
         ] ;
     sh:targetClass
@@ -165,9 +161,7 @@ ex:shape-R0-HL3-1
                     sh:inversePath skos:member ;
                 ]
                 
-                [
-                    sh:inversePath dcterms:hasPart ;
-                ]
+                dcterms:isPartOf
             ) ;
         ] ,
         [
@@ -186,22 +180,13 @@ ex:shape-R0-HL3-activity
     sh:property 
         [
             sh:class dcat:Catalog ;
-            sh:path
-                [
-                    sh:inversePath dcterms:hasPart ;
-                ] ;
+            sh:path dcterms:isPartOf ;
         ] ,
         [
             sh:class ex:TopLevelCatalog ;
             sh:path (
-                
-                [
-                    sh:inversePath dcterms:hasPart ;
-                ]
-                
-                [
-                    sh:inversePath dcterms:hasPart ;
-                ]
+                dcterms:isPartOf
+                dcterms:isPartOf
             ) ;
         ] ;
     sh:targetClass ex:GeoprocessingActivity ;

@@ -1,3 +1,4 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX demo: <http://ospd/demo/>
 PREFIX ex: <http://example.org/>
 PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
@@ -7,9 +8,10 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 demo:slow-river-detection
     a ex:GeoprocessingActivity ;
     schema:name "Slow River Detection" ;
-    schema:status [
+    ex:qualifiedStatus [
         schema:value istatus:experimental ;
         schema:memberOf demo:cro-geoacs ;
     ] ;
     skos:broader demo:river-detection ;
+    dcterms:isPartOf demo:cro-geoacs ;
 .

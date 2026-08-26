@@ -1,3 +1,5 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX demo: <http://ospd/demo/>
 PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus>
 PREFIX istatuses: <https://def.isotc211.org/codeset/ItemStatus/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -114,4 +116,5 @@ istatus:
     schema:isPartOf <https://def.isotc211.org/codesets> ;
     schema:publisher <https://def.isotc211.org/org/tc211> ;
     schema:version "1" ;
+    dcterms:isPartOf demo:vocs ;
 .
