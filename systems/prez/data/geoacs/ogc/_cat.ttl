@@ -4,16 +4,18 @@ PREFIX demo: <http://ospd/demo/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX schema: <https://schema.org/>
 
-demo:cro-geoacs
+demo:ogc-geoacs
     a dcat:Catalog ;
     dcterms:hasPart
-        demo:cro-geoac-01 ,
-        demo:cro-geoac-02 ;
+        demo:buffer ,
+        demo:cloud-removal ,
+        demo:waterbody-detection ,
+        demo:dissolve ;
     prov:qualifiedAttribution
         [
-            prov:agent <https://mepgt> ;
+            prov:agent <https://defs.opengis.net/org/ogc> ;
             prov:hadRole <https://def.isotc211.org/codeset/RegisterRolesDemo/register-owner> ;
         ] ;
     schema:author <https://kurrawong.ai> ;
-    schema:name "Croatian MEPGT Geoprocessing Activities Register" ;
+    schema:name "OGC Standard Geoprocessing Activities Register" ;
 .

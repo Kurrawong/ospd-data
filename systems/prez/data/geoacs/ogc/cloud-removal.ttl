@@ -3,11 +3,11 @@ PREFIX ex: <http://example.org/>
 PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
 PREFIX schema: <https://schema.org/>
 
-demo:euro-geoac-02
+demo:cloud-removal
     a ex:GeoprocessingActivity ;
-    schema:name "European Geoprocessing Activity 2" ;
+    schema:name "Cloud Removal" ;
     schema:status [
         schema:value istatus:stable ;
-        schema:memberOf demo:euro-geoacs ;
+        schema:memberOf demo:ogc-geoacs ;
     ] ;
 .

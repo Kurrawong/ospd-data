@@ -1,0 +1,13 @@
+PREFIX demo: <http://ospd/demo/>
+PREFIX ex: <http://example.org/>
+PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
+PREFIX schema: <https://schema.org/>
+
+demo:waterbody-detection
+    a ex:GeoprocessingActivity ;
+    schema:name "Waterbody Detection" ;
+    schema:status [
+        schema:value istatus:stable ;
+        schema:memberOf demo:ogc-geoacs ;
+    ] ;
+.

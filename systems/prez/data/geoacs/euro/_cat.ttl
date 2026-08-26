@@ -7,9 +7,9 @@ PREFIX schema: <https://schema.org/>
 demo:euro-geoacs
     a dcat:Catalog ;
     dcterms:hasPart
-        demo:euro-geoac-01 ,
-        demo:euro-geoac-02 ,
-        demo:euro-geoac-03 ;
+        demo:lake-detection ,
+        demo:river-detection ,
+        demo:ice-detection ;
     prov:qualifiedAttribution
         [
             prov:agent <https://mepgt> ;

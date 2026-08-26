@@ -1,11 +1,17 @@
+PREFIX cls: <https://def.isotc211.org/class/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX ex: <http://example.org/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 ex:GeoprocessingActivity
     a rdfs:Class ;
     rdfs:label "Geoprocessing Activity" ;
-    rdfs:subClassOf dcat:Resource ;
+    rdfs:comment "A Geoprocessing Activity is a computational event that occurs over a period of time and acts upon or with entities" ;
+    rdfs:subClassOf
+        prof:Activity
+        dcat:Resource ,
+        cls:RegisterItem ;
 .
 
 ex:TopLevelCatalog
