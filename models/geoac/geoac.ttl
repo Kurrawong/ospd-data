@@ -11,7 +11,7 @@ ont:
     a owl:Ontology ;
     owl:versionIRI <http://example.org/geoac/1.0> ;
     owl:versionInfo "1.0" ;
-    skos:historyNote "Created for the OGC Open Science Persistent Demonstrator registry catalogue."@en ;
+    skos:historyNote "Created for the OGC Open Science Persistent Demonstrator registry catalogue." ;
     schema:codeRepository "https://github.com/Kurrawong/ospd-regcat"^^xsd:anyURI ;
     schema:copyrightHolder <https://kurrawong.ai> ;
     schema:copyrightNotice "Copyright 2026 KurrawongAI" ;
@@ -20,9 +20,9 @@ ont:
     schema:dateCreated "2026-08-26"^^xsd:date ;
     schema:dateIssued "2026-08-26"^^xsd:date ;
     schema:dateModified "2026-08-26"^^xsd:date ;
-    schema:description "An ontology defining geoprocessing activities for registry publication."@en ;
+    schema:description "An ontology defining geoprocessing activities for registry publication." ;
     schema:license <https://spdx.org/licenses/Apache-2.0.html> ;
-    schema:name "Geoprocessing Activity Model"@en ;
+    schema:name "Geoprocessing Activity Model" ;
     schema:publisher <https://kurrawong.ai> ;
 .
 
@@ -30,8 +30,17 @@ ex:GeoprocessingActivity
     a owl:Class ;
     rdfs:isDefinedBy ont: ;
     rdfs:subClassOf prov:Activity ;
-    skos:definition "An activity that performs a geospatial processing operation."@en ;
-    skos:example "A buffering operation is an instance of Geoprocessing Activity."@en ;
-    skos:historyNote "Defined for the OGC Open Science Persistent Demonstrator registry catalogue."@en ;
-    skos:prefLabel "Geoprocessing Activity"@en ;
+    schema:description "An activity that performs a geospatial processing operation." ;
+    skos:example "A buffering operation is an instance of Geoprocessing Activity." ;
+    skos:historyNote "Defined for the OGC Open Science Persistent Demonstrator registry catalogue." ;
+    schema:name "Geoprocessing Activity" ;
+.
+
+skos:broader
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+    schema:name "has broader" ;
+    schema:description "Relates a concept to a concept that is more general in meaning." ;
+    skos:scopeNote "Use this predicate to indicate that a Geoprocessing Activity has a more generic version" ;
+    skos:example "An Ice Detection Geoprocessing Activity may have a Waterbody Detection indicated with this predicate"
 .
