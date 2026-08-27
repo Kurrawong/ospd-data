@@ -8,7 +8,7 @@ demo:euro-geoacs
     a dcat:Catalog ;
     prov:qualifiedAttribution
         [
-            prov:agent <https://mepgt> ;
+            prov:agent <https://eea> ;
             prov:hadRole <https://def.isotc211.org/codeset/RegisterRolesDemo/register-owner> ;
         ] ;
     schema:author <https://kurrawong.ai> ;

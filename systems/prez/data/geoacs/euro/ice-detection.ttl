@@ -11,6 +11,10 @@ demo:ice-detection
     ex:qualifiedStatus [
         schema:value istatus:stable ;
         schema:memberOf demo:euro-geoacs ;
+    ] ,
+    [
+        schema:value istatus:experimental ;
+        schema:memberOf demo:ogc-geoacs ;
     ] ;
     skos:broader demo:waterbody-detection ;
     dcterms:isPartOf demo:euro-geoacs ;
