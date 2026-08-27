@@ -48,6 +48,13 @@ exp:GeoAcGov
                         ex:qualifiedStatus
                         schema:memberOf
                         prov:qualifiedAttribution
+                        prov:agent
+                        schema:name
+                    )
+                    (
+                        ex:qualifiedStatus
+                        schema:memberOf
+                        prov:qualifiedAttribution
                         prov:hadRole
                     )
                ) ;
