@@ -13,5 +13,4 @@ demo:rapid-river-detection
         schema:memberOf demo:cro-geoacs ;
     ] ;
     skos:broader demo:river-detection ;
-    dcterms:isPartOf demo:cro-geoacs ;
 .

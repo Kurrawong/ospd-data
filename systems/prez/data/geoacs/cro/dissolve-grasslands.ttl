@@ -17,5 +17,4 @@ demo:dissolve-grasslands
         schema:memberOf demo:ogc-geoacs ;
     ] ;
     skos:broader demo:dissolve ;
-    dcterms:isPartOf demo:cro-geoacs ;
 .

@@ -109,8 +109,17 @@ ex:shape-R0-HL1
                 ]
             ) ;
             sh:path [
-                sh:inversePath dcterms:isPartOf ;
-            ]
+                sh:alternativePath (
+                    (
+                        [ sh:inversePath schema:memberOf ]
+                        [ sh:inversePath ex:qualifiedStatus ]
+                    )
+                    (
+                        [ sh:inversePath schema:memberOf ]
+                        [ sh:inversePath ex:qualifiedStatus ]
+                    )
+                ) ;
+            ] ;
         ] ;
     sh:targetClass ex:TopLevelCatalog ;
     ont:hierarchyLevel 1 ;
@@ -121,7 +130,18 @@ ex:shape-R0-HL2
     sh:property
         [
             sh:class dcat:Catalog ;
-            sh:path dcterms:isPartOf ;
+            sh:path [
+                sh:alternativePath (
+                    (
+                        ex:qualifiedStatus
+                        schema:memberOf
+                    )
+                    (
+                        ex:qualifiedStatus
+                        schema:memberOf
+                    )
+                ) ;
+            ] ;
         ] ;
     sh:targetClass
         skos:ConceptScheme ,
@@ -141,7 +161,18 @@ ex:shape-R0-HL3
             sh:class dcat:Catalog ;
             sh:path (
                 skos:inScheme
-                dcterms:isPartOf
+                [
+                    sh:alternativePath (
+                        (
+                            ex:qualifiedStatus
+                            schema:memberOf
+                        )
+                        (
+                            ex:qualifiedStatus
+                            schema:memberOf
+                        )
+                    ) ;
+                ]
             ) ;
         ] ;
     sh:targetClass
@@ -161,7 +192,18 @@ ex:shape-R0-HL3-1
                     sh:inversePath skos:member ;
                 ]
                 
-                dcterms:isPartOf
+                [
+                    sh:alternativePath (
+                        (
+                            ex:qualifiedStatus
+                            schema:memberOf
+                        )
+                        (
+                            ex:qualifiedStatus
+                            schema:memberOf
+                        )
+                    ) ;
+                ]
             ) ;
         ] ,
         [
@@ -180,13 +222,46 @@ ex:shape-R0-HL3-activity
     sh:property 
         [
             sh:class dcat:Catalog ;
-            sh:path dcterms:isPartOf ;
+            sh:path [
+                sh:alternativePath (
+                    (
+                        ex:qualifiedStatus
+                        schema:memberOf
+                    )
+                    (
+                        ex:qualifiedStatus
+                        schema:memberOf
+                    )
+                ) ;
+            ] ;
         ] ,
         [
             sh:class ex:TopLevelCatalog ;
             sh:path (
-                dcterms:isPartOf
-                dcterms:isPartOf
+                [
+                    sh:alternativePath (
+                        (
+                            ex:qualifiedStatus
+                            schema:memberOf
+                        )
+                        (
+                            ex:qualifiedStatus
+                            schema:memberOf
+                        )
+                    ) ;
+                ]
+                [
+                    sh:alternativePath (
+                        (
+                            ex:qualifiedStatus
+                            schema:memberOf
+                        )
+                        (
+                            ex:qualifiedStatus
+                            schema:memberOf
+                        )
+                    ) ;
+                ]
             ) ;
         ] ;
     sh:targetClass ex:GeoprocessingActivity ;

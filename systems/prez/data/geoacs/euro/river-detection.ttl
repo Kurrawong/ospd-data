@@ -13,5 +13,4 @@ demo:river-detection
         schema:memberOf demo:euro-geoacs ;
     ] ;
     skos:broader demo:waterbody-detection ;
-    dcterms:isPartOf demo:euro-geoacs ;
 .

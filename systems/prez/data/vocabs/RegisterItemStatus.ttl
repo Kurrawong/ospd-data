@@ -117,9 +117,8 @@ istatus:
     schema:isPartOf <https://def.isotc211.org/codesets> ;
     schema:publisher <https://def.isotc211.org/org/tc211> ;
     schema:version "1" ;
-    dcterms:isPartOf demo:vocs ;
     ex:qualifiedStatus [
-        schema:value istatus:stable ;
-        schema:memberOf demo:vocabs ;
+        schema:value istatuses:stable ;
+        schema:memberOf demo:vocs ;
     ] ;
 .

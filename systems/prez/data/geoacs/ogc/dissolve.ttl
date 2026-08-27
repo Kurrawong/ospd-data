@@ -11,5 +11,4 @@ demo:dissolve
         schema:value istatus:stable ;
         schema:memberOf demo:ogc-geoacs ;
     ] ;
-    dcterms:isPartOf demo:ogc-geoacs ;
 .
