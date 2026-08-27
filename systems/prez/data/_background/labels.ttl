@@ -1,5 +1,6 @@
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ex: <http://example.org/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prez: <https://prez.dev/>
 PREFIX prof: <http://www.w3.org/ns/dx/prof/>
@@ -187,4 +188,8 @@ schema:name
 
 schema:url
     schema:name "url" ;
+.
+
+ex:qualifiedStatus
+    schema:name "qualified status" ;
 .

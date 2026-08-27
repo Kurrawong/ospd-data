@@ -4,6 +4,7 @@ PREFIX ex: <http://example.org/>
 PREFIX exp: <https://example.com/profile/>
 PREFIX prez: <https://prez.dev/>
 PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX schema: <https://schema.org/>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -24,6 +25,18 @@ exp:GeoAcGov
         "text/turtle" ;
     sh:property
         [
-            sh:path schema:name ;
+            sh:path [
+                sh:union (
+                    schema:name
+                    (
+                        ex:qualifiedStatus
+                        schema:memberOf
+                    )
+                    (
+                        ex:qualifiedStatus
+                        schema:value
+                    )
+               ) ;
+            ] ;
         ] ;
 .

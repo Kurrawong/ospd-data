@@ -7,6 +7,7 @@ PREFIX prof: <http://www.w3.org/ns/dx/prof/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX schema: <https://schema.org/>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 exp:GeoAcDef
@@ -30,14 +31,15 @@ exp:GeoAcDef
                     sh:union (
                         schema:name
                         rdf:type
-                         (
-                        schema:status
-                        schema:value
-                    )
-                         (
-                        schema:status
-                        schema:memberOf
-                    )
+                        (
+                            schema:status
+                            schema:value
+                        )
+                        (
+                            schema:status
+                            schema:memberOf
+                        )
+                        skos:broader
                     ) ;
                 ] ;
         ] ;
