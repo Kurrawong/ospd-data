@@ -11,6 +11,10 @@ demo:dissolve-grasslands
     ex:qualifiedStatus [
         schema:value istatus:stable ;
         schema:memberOf demo:cro-geoacs ;
+    ] ,
+    [
+        schema:value istatus:submitted ;
+        schema:memberOf demo:ogc-geoacs ;
     ] ;
     skos:broader demo:dissolve ;
     dcterms:isPartOf demo:cro-geoacs ;

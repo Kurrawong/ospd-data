@@ -28,6 +28,10 @@ ont:
     schema:name "Registry Catalogue Model"@en ;
     schema:publisher <https://kurrawong.ai> ;
     dcterms:isPartOf demo:models ;
+    ex:qualifiedStatus [
+        schema:value istatus:stable ;
+        schema:memberOf demo:models ;
+    ] ;
 .
 
 ex:RegisteredResource

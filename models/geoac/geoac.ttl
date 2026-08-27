@@ -27,6 +27,10 @@ ont:
     schema:name "Geoprocessing Activity Model" ;
     schema:publisher <https://kurrawong.ai> ;
     dcterms:isPartOf demo:models ;
+    ex:qualifiedStatus [
+        schema:value istatus:stable ;
+        schema:memberOf demo:models ;
+    ] ;
 .
 
 ex:GeoprocessingActivity
