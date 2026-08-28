@@ -12,6 +12,10 @@ PREFIX vann: <http://purl.org/vocab/vann/>
     schema:name "qualified status" ;
 .
 
+<http://example.org/GeoprocessingActivity>
+    schema:name "Geoprocessing Activity" ;
+.
+
 dcterms:conformsTo
     schema:name "Conforms To" ;
 .

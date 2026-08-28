@@ -17,7 +17,7 @@ exp:GeoAcDef
         prez:ObjectProfile ;
     dcterms:description "Displays only definitions for Concepts" ;
     dcterms:identifier "geoacdef"^^xsd:token ;
-    dcterms:name "Geoprocessing Activity Default Profile" ;
+    dcterms:title "Geoprocessing Activity Default Profile" ;
     altr-ext:constrainsClass ex:GeoprocessingActivity ;
     altr-ext:hasDefaultResourceFormat "text/anot+turtle" ;
     altr-ext:hasResourceFormat

@@ -54,7 +54,8 @@ ex:items-listing
     ont:relevantShapes
         ex:shape-R0-HL3 ,
         ex:shape-R0-HL3-1 ,
-        ex:shape-R0-HL3-activity ;
+        ex:shape-R0-HL3-activity ,
+        ex:shape-R0-HL3-model ;
 .
 
 ex:items-object
@@ -66,7 +67,8 @@ ex:items-object
     ont:relevantShapes
         ex:shape-R0-HL3 ,
         ex:shape-R0-HL3-1 ,
-        ex:shape-R0-HL3-activity ;
+        ex:shape-R0-HL3-activity ,
+        ex:shape-R0-HL3-model ;
 .
 
 ex:shape-R0-HL1
@@ -282,5 +284,34 @@ ex:shape-R0-HL3-activity
                 ] ;
         ] ;
     sh:targetClass ex:GeoprocessingActivity ;
+    ont:hierarchyLevel 3 ;
+.
+
+ex:shape-R0-HL3-model
+    a sh:NodeShape ;
+    sh:property
+        [
+            sh:class owl:Ontology ;
+            sh:path rdfs:isDefinedBy ;
+        ] ,
+        [
+            sh:class dcat:Catalog ;
+            sh:path (
+                rdfs:isDefinedBy
+                [
+                    sh:alternativePath (
+                        (
+                            ex:qualifiedStatus
+                            schema:memberOf
+                        )
+                    ) ;
+                ]
+            ) ;
+        ] ;
+    sh:targetClass
+        owl:Class ,
+        owl:ObjectProperty ,
+        owl:DatatypeProperty ,
+        owl:AnnotationProperty ;
     ont:hierarchyLevel 3 ;
 .

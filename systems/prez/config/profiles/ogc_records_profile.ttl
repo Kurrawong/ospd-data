@@ -21,7 +21,7 @@ prez:OGCRecordsProfile
         prez:IndexProfile ;
     dcterms:description "A system profile for OGC Records conformant API" ;
     dcterms:identifier "ogc"^^xsd:token ;
-    dcterms:name "OGC Profile" ;
+    dcterms:title "OGC Profile" ;
     altr-ext:constrainsClass prez:CatPrez ;
     altr-ext:hasDefaultResourceFormat "text/anot+turtle" ;
     altr-ext:hasNodeShape
@@ -81,7 +81,7 @@ prez:OGCItemProfile
         prez:ObjectProfile ;
     dcterms:description "A profile for individual OGC Records API items" ;
     dcterms:identifier "ogc-item"^^xsd:token ;
-    dcterms:name "OGC Object Profile" ;
+    dcterms:title "OGC Object Profile" ;
     altr-ext:constrainsClass
         rdf:Resource ,
         skos:Collection ,
@@ -128,7 +128,7 @@ prez:OGCListingProfile
         prez:ListingProfile ;
     dcterms:description "A profile for listing different kinds of items relevant to an OGC Records API" ;
     dcterms:identifier "ogc-listing"^^xsd:token ;
-    dcterms:name "OGC Listing Profile" ;
+    dcterms:title "OGC Listing Profile" ;
     altr-ext:constrainsClass
         rdf:Resource ,
         skos:Collection ,
@@ -158,7 +158,7 @@ prez:OGCSKOSCollectionObjectProfile
         prez:ObjectProfile ;
     dcterms:description "A profile for SKOS Collections" ;
     dcterms:identifier "ogc-skos-collection-object"^^xsd:token ;
-    dcterms:name "OGC SKOS Collection Object Profile" ;
+    dcterms:title "OGC SKOS Collection Object Profile" ;
     altr-ext:constrainsClass skos:Collection ;
     altr-ext:hasDefaultResourceFormat "text/anot+turtle" ;
     altr-ext:hasResourceFormat
@@ -192,7 +192,7 @@ prez:OGCSchemesListProfile
         prez:ListingProfile ;
     dcterms:description "A profile for listing SKOS Concept Schemes" ;
     dcterms:identifier "ogc-schemes-listing"^^xsd:token ;
-    dcterms:name "OGC Concept Scheme Listing Profile" ;
+    dcterms:title "OGC Concept Scheme Listing Profile" ;
     altr-ext:constrainsClass
         skos:ConceptScheme ,
         prez:CQLFilterResult ;
@@ -232,7 +232,7 @@ prez:OGCSchemesObjectProfile
         prez:ObjectProfile ;
     dcterms:description "A profile for SKOS Concept Schemes" ;
     dcterms:identifier "ogc-schemes-object"^^xsd:token ;
-    dcterms:name "OGC Concept Scheme Object Profile" ;
+    dcterms:title "OGC Concept Scheme Object Profile" ;
     altr-ext:constrainsClass skos:ConceptScheme ;
     altr-ext:hasDefaultResourceFormat "text/anot+turtle" ;
     altr-ext:hasResourceFormat
