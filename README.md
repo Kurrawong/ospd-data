@@ -1,16 +1,15 @@
 # OSPD Data
 
-This repository contains the models. vocabularies and demonstration data created by [KurrawongAI](https://kurrawong.ai)
+This repository contains the models, vocabularies and demonstration data created by [KurrawongAI](https://kurrawong.ai)
 for the [Open Geospatial Consortium](https://www.ogc.org)'s [Open Science Persistent Demonstrator 2026](https://docs.ogc.org/request/2026/CFP_OSPD_2026.html) program.
 
+The resources are managed using [kgm](https://kurrawong.github.io/kgm/), so there is a manifest at `resources/manifest.ttl`
+that links to and indicates roles for all the RDF resources.
 
+This data is all loaded into KurrawongAI's demonstration RDF database - a [Fuseki](https://jena.apache.org/documentation/fuseki2/) 
+instance - using kgm and, from there the [Prez](https://prez.dev/) tool is used to provide online access to it.
 
-The resources are as follows:
-
-* `models/geoac/` - Geoprocessing Activity Model
-* `model/regcat/` - Registry Catalogue Model
-* `systems/prez/config/` - configuration for the [Prez](https://prez.dev) system needed for demo data display
-* `systems/prez/data/` - data for use in a Prez demo system implementing the models above
+See the [ospd-demo repository](https://github.com/Kurrawong/ospd-demo) for details of the online demo.
 
 ## License & Copyright
 
