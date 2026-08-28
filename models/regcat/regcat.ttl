@@ -12,8 +12,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 ont:
     a owl:Ontology ;
-    owl:versionIRI <http://example.org/regcat/1.0> ;
-    owl:versionInfo "1.0" ;
+    owl:versionIRI <http://example.org/regcat/1.1> ;
+    owl:versionInfo "1.1" ;
     skos:historyNote "Created for the OGC Open Science Persistent Demonstrator registry catalogue."@en ;
     schema:codeRepository "https://github.com/Kurrawong/ospd-regcat"^^xsd:anyURI ;
     schema:copyrightHolder <https://kurrawong.ai> ;
@@ -22,7 +22,7 @@ ont:
     schema:creator <https://kurrawong.ai> ;
     schema:dateCreated "2026-08-26"^^xsd:date ;
     schema:dateIssued "2026-08-26"^^xsd:date ;
-    schema:dateModified "2026-08-26"^^xsd:date ;
+    schema:dateModified "2026-08-28"^^xsd:date ;
     schema:description "An ontology defining resources published as registered items in registry catalogues."@en ;
     schema:license <https://spdx.org/licenses/Apache-2.0.html> ;
     schema:name "Registry Catalogue Model"@en ;
@@ -43,4 +43,13 @@ ex:RegisteredResource
     skos:example "A registered geoprocessing activity is an instance of Registered Resource."@en ;
     skos:historyNote "Defined for the OGC Open Science Persistent Demonstrator registry catalogue."@en ;
     skos:prefLabel "Registered Resource"@en ;
+.
+
+ex:qualifiedStatus
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+    schema:name "qualified status" ;
+    schema:description "The status of an item with respect to a register" ;
+    skos:scopeNote "Use this predicate to indicate that an item has a status within a register, so the range value should be a Blank Node with predicates schema:value, for the status, and schema:memberOf, for the register" ;
+    skos:example "The Ice Detection Geoprocessing Activity has the qualified status of 'valid' within the OGC Standard Geoprocessing Activities Register and 'stable' within the Euro Geoprocessing Activities Register" ;
 .

@@ -39,6 +39,10 @@ PREFIX schema: <https://schema.org/>
             prof:hasRole roles:CatalogueData ;
         ] ,
         [
+            prof:hasArtifact "geoacs/_cat.ttl" ;
+            prof:hasRole roles:CatalogueData ;
+        ] ,
+        [
             prof:hasArtifact "geoacs/ogc/_cat.ttl" ;
             prof:hasRole roles:CatalogueData ;
         ] ,
