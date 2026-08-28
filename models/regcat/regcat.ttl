@@ -1,7 +1,6 @@
 PREFIX cls: <https://def.isotc211.org/class/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX ex: <http://example.org/>
-PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX demo: <http://ospd/demo/>
 PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
 PREFIX ont: <http://example.org/regcat>

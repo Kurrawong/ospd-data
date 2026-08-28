@@ -6,8 +6,8 @@ PREFIX schema: <https://schema.org/>
 
 demo:vocs
     a
-        dcat:Catalog ,
-        ex:TopLevelCatalog ;
+        ex:TopLevelCatalog ,
+        dcat:Catalog ;
     prov:qualifiedAttribution
         [
             prov:agent <https://def.isotc211.org/org/tc211> ;

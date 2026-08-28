@@ -18,9 +18,9 @@ prez:OGCRecordsProfile
     a
         prof:Profile ,
         prez:IndexProfile ;
-    dcterms:description "A system profile for OGC Records conformant API" ;
-    dcterms:identifier "ogc"^^xsd:token ;
-    dcterms:title "OGC Profile" ;
+    schema:description "A system profile for OGC Records conformant API" ;
+    schema:identifier "ogc"^^xsd:token ;
+    schema:name "OGC Profile" ;
     altr-ext:constrainsClass prez:CatPrez ;
     altr-ext:hasDefaultResourceFormat "text/anot+turtle" ;
     altr-ext:hasNodeShape
@@ -78,9 +78,9 @@ prez:OGCItemProfile
         prof:Profile ,
         sh:NodeShape ,
         prez:ObjectProfile ;
-    dcterms:description "A profile for individual OGC Records API items" ;
-    dcterms:identifier "ogc-item"^^xsd:token ;
-    dcterms:title "OGC Object Profile" ;
+    schema:description "A profile for individual OGC Records API items" ;
+    schema:identifier "ogc-item"^^xsd:token ;
+    schema:name "OGC Object Profile" ;
     altr-ext:constrainsClass
         rdf:Resource ,
         skos:Collection ,
@@ -114,7 +114,7 @@ prez:OGCItemProfile
         [
             sh:maxCount 0 ;
             sh:path
-                dcterms:hasPart ,
+                schema:hasPart ,
                 rdfs:member ,
                 skos:member ;
         ] ;
@@ -125,9 +125,9 @@ prez:OGCListingProfile
         prof:Profile ,
         sh:NodeShape ,
         prez:ListingProfile ;
-    dcterms:description "A profile for listing different kinds of items relevant to an OGC Records API" ;
-    dcterms:identifier "ogc-listing"^^xsd:token ;
-    dcterms:title "OGC Listing Profile" ;
+    schema:description "A profile for listing different kinds of items relevant to an OGC Records API" ;
+    schema:identifier "ogc-listing"^^xsd:token ;
+    schema:name "OGC Listing Profile" ;
     altr-ext:constrainsClass
         rdf:Resource ,
         skos:Collection ,
@@ -155,9 +155,9 @@ prez:OGCSKOSCollectionObjectProfile
         prof:Profile ,
         sh:NodeShape ,
         prez:ObjectProfile ;
-    dcterms:description "A profile for SKOS Collections" ;
-    dcterms:identifier "ogc-skos-collection-object"^^xsd:token ;
-    dcterms:title "OGC SKOS Collection Object Profile" ;
+    schema:description "A profile for SKOS Collections" ;
+    schema:identifier "ogc-skos-collection-object"^^xsd:token ;
+    schema:name "OGC SKOS Collection Object Profile" ;
     altr-ext:constrainsClass skos:Collection ;
     altr-ext:hasDefaultResourceFormat "text/anot+turtle" ;
     altr-ext:hasResourceFormat
@@ -189,9 +189,9 @@ prez:OGCSchemesListProfile
         prof:Profile ,
         sh:NodeShape ,
         prez:ListingProfile ;
-    dcterms:description "A profile for listing SKOS Concept Schemes" ;
-    dcterms:identifier "ogc-schemes-listing"^^xsd:token ;
-    dcterms:title "OGC Concept Scheme Listing Profile" ;
+    schema:description "A profile for listing SKOS Concept Schemes" ;
+    schema:identifier "ogc-schemes-listing"^^xsd:token ;
+    schema:name "OGC Concept Scheme Listing Profile" ;
     altr-ext:constrainsClass
         skos:ConceptScheme ,
         prez:CQLFilterResult ;
@@ -209,7 +209,7 @@ prez:OGCSchemesListProfile
                     sh:union (
                         skos:prefLabel
                         rdf:type
-                        dcterms:publisher
+                        schema:publisher
                         reg:status
                          (
                         prov:qualifiedDerivation
@@ -229,9 +229,9 @@ prez:OGCSchemesObjectProfile
         prof:Profile ,
         sh:NodeShape ,
         prez:ObjectProfile ;
-    dcterms:description "A profile for SKOS Concept Schemes" ;
-    dcterms:identifier "ogc-schemes-object"^^xsd:token ;
-    dcterms:title "OGC Concept Scheme Object Profile" ;
+    schema:description "A profile for SKOS Concept Schemes" ;
+    schema:identifier "ogc-schemes-object"^^xsd:token ;
+    schema:name "OGC Concept Scheme Object Profile" ;
     altr-ext:constrainsClass skos:ConceptScheme ;
     altr-ext:hasDefaultResourceFormat "text/anot+turtle" ;
     altr-ext:hasResourceFormat

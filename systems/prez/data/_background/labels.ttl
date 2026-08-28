@@ -1,49 +1,43 @@
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX ex: <http://example.org/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX prez: <https://prez.dev/>
 PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX schema: <https://schema.org/>
-PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX vann: <http://purl.org/vocab/vann/>
+
+<http://example.org/qualifiedStatus>
+    schema:name "qualified status" ;
+.
 
 dcterms:conformsTo
     schema:name "Conforms To" ;
 .
 
-dcterms:created
-    schema:name "Date Created" ;
+vann:preferredNamespacePrefix
+    schema:name "Preferred Namespace Prefix" ;
 .
 
-dcterms:creator
-    schema:name "Creator" ;
-.
-
-dcterms:hasPart
-    schema:name "Has Part" ;
-.
-
-dcterms:modified
-    schema:name "Date Modified" ;
-.
-
-dcterms:publisher
-    schema:name "Publisher" ;
-.
-
-<http://resource.geosciml.org/ontology/timescale/gts#rank>
-    schema:name "temporal element rank" ;
-.
-
-<http://resource.geosciml.org/ontology/timescale/gts#ratifiedGSSP>
-    schema:name "ratified GSSP" ;
+vann:preferredNamespaceUri
+    schema:name "Preferred Namespace Uri" ;
 .
 
 rdf:type
     schema:name "type" ;
+.
+
+owl:Class
+    schema:name "Class" ;
+.
+
+owl:ObjectProperty
+    schema:name "Object Property" ;
+.
+
+owl:Ontology
+    schema:name "Ontology" ;
 .
 
 owl:versionIRI
@@ -54,8 +48,8 @@ owl:versionInfo
     schema:name "version Info" ;
 .
 
-skos:Collection
-    schema:name "Collection" ;
+<http://www.w3.org/2004/02/skos/core>
+    schema:name "SKOS Vocabulary" ;
 .
 
 skos:Concept
@@ -66,20 +60,12 @@ skos:ConceptScheme
     schema:name "Concept Scheme" ;
 .
 
-skos:altLabel
-    schema:name "alternative label" ;
-.
-
-skos:broader
-    schema:name "has broader" ;
-.
-
-skos:changeNote
-    schema:name "change note" ;
-.
-
 skos:definition
     schema:name "definition" ;
+.
+
+skos:example
+    schema:name "example" ;
 .
 
 skos:hasTopConcept
@@ -94,36 +80,24 @@ skos:inScheme
     schema:name "is in scheme" ;
 .
 
-skos:member
-    schema:name "has member" ;
-.
-
-skos:narrower
-    schema:name "has narrower" ;
-.
-
-skos:notation
-    schema:name "notation" ;
-.
-
-skos:note
-    schema:name "note" ;
-.
-
 skos:prefLabel
     schema:name "preferred label" ;
 .
 
-time:hasBeginning
-    schema:name "has beginning" ;
+skos:scopeNote
+    schema:name "scope note" ;
 .
 
-time:hasEnd
-    schema:name "has end" ;
+skos:topConceptOf
+    schema:name "is top concept in scheme" ;
 .
 
 dcat:Catalog
     schema:name "Catalog" ;
+.
+
+dcat:Resource
+    schema:name "Catalogued resource" ;
 .
 
 prof:hasArtifact
@@ -138,11 +112,31 @@ prof:hasRole
     schema:name "has role" ;
 .
 
-sh:order
-    schema:name "order"@en ;
+prov:Activity
+    schema:name "Activity" ;
 .
 
-prez:Manifest
+prov:agent
+    schema:name "agent" ;
+.
+
+prov:hadRole
+    schema:name "had role" ;
+.
+
+prov:qualifiedAttribution
+    schema:name "qualified attribution" ;
+.
+
+<https://linked.data.gov.au/def/ontpub/validator>
+    schema:name "Ontology Publication Profile Validator" ;
+.
+
+<https://linked.data.gov.au/def/vocpub/validator>
+    schema:name "VocPub Validator" ;
+.
+
+<https://prez.dev/Manifest>
     schema:name "Manifest" ;
 .
 
@@ -150,8 +144,8 @@ schema:Organization
     schema:name "Organization" ;
 .
 
-schema:alternateName
-    schema:name "alternate name" ;
+schema:additionalType
+    schema:name "additional type" ;
 .
 
 schema:author
@@ -162,8 +156,8 @@ schema:citation
     schema:name "citation" ;
 .
 
-schema:color
-    schema:name "color" ;
+schema:codeRepository
+    schema:name "code repository" ;
 .
 
 schema:copyrightHolder
@@ -174,22 +168,58 @@ schema:copyrightNotice
     schema:name "copyright notice" ;
 .
 
+schema:copyrightYear
+    schema:name "copyright year" ;
+.
+
+schema:creator
+    schema:name "creator" ;
+.
+
+schema:dateCreated
+    schema:name "date created" ;
+.
+
+schema:dateIssued
+    schema:name "date issued" ;
+.
+
+schema:dateModified
+    schema:name "date modified" ;
+.
+
+schema:description
+    schema:name "description" ;
+.
+
+schema:isPartOf
+    schema:name "is part of" ;
+.
+
 schema:license
     schema:name "license" ;
 .
 
-schema:marginOfError
-    schema:name "margin of error" ;
+schema:memberOf
+    schema:name "member of" ;
 .
 
 schema:name
     schema:name "name" ;
 .
 
+schema:publisher
+    schema:name "publisher" ;
+.
+
 schema:url
     schema:name "url" ;
 .
 
-ex:qualifiedStatus
-    schema:name "qualified status" ;
+schema:value
+    schema:name "value" ;
+.
+
+schema:version
+    schema:name "version" ;
 .

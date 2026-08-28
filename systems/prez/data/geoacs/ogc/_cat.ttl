@@ -1,5 +1,4 @@
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX demo: <http://ospd/demo/>
 PREFIX ex: <http://example.org/>
 PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
@@ -8,6 +7,11 @@ PREFIX schema: <https://schema.org/>
 
 demo:ogc-geoacs
     a dcat:Catalog ;
+    ex:qualifiedStatus
+        [
+            schema:memberOf demo:geoacs ;
+            schema:value istatus:stable ;
+        ] ;
     prov:qualifiedAttribution
         [
             prov:agent <https://defs.opengis.net/org/ogc> ;
@@ -15,8 +19,4 @@ demo:ogc-geoacs
         ] ;
     schema:author <https://kurrawong.ai> ;
     schema:name "OGC Standard Geoprocessing Activities Register" ;
-    ex:qualifiedStatus [
-        schema:value istatus:stable ;
-        schema:memberOf demo:geoacs ;
-    ] ;
 .

@@ -15,9 +15,9 @@ exp:GeoAcGov
         prof:Profile ,
         sh:NodeShape ,
         prez:ObjectProfile ;
-    dcterms:description "Displays only definitions for Concepts" ;
-    dcterms:identifier "geoacprov"^^xsd:token ;
-    dcterms:title "Geoprocessing Activity Governance Profile" ;
+    schema:description "Displays only definitions for Concepts" ;
+    schema:identifier "geoacprov"^^xsd:token ;
+    schema:name "Geoprocessing Activity Governance Profile" ;
     altr-ext:constrainsClass ex:GeoprocessingActivity ;
     altr-ext:hasDefaultResourceFormat "text/anot+turtle" ;
     altr-ext:hasResourceFormat

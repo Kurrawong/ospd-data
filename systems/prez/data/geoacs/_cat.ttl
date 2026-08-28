@@ -6,8 +6,8 @@ PREFIX schema: <https://schema.org/>
 
 demo:geoacs
     a
-        dcat:Catalog ,
-        ex:TopLevelCatalog ;
+        ex:TopLevelCatalog ,
+        dcat:Catalog ;
     prov:qualifiedAttribution
         [
             prov:agent <https://defs.opengis.net/org/ogc> ;

@@ -15,9 +15,9 @@ exp:GeoAcDef
         prof:Profile ,
         sh:NodeShape ,
         prez:ObjectProfile ;
-    dcterms:description "Displays only definitions for Concepts" ;
-    dcterms:identifier "geoacdef"^^xsd:token ;
-    dcterms:title "Geoprocessing Activity Default Profile" ;
+    schema:description "Displays only definitions for Concepts" ;
+    schema:identifier "geoacdef"^^xsd:token ;
+    schema:name "Geoprocessing Activity Default Profile" ;
     altr-ext:constrainsClass ex:GeoprocessingActivity ;
     altr-ext:hasDefaultResourceFormat "text/anot+turtle" ;
     altr-ext:hasResourceFormat

@@ -1,6 +1,8 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ex: <http://example.org/>
 PREFIX prof: <http://www.w3.org/ns/dx/prof/>
 PREFIX roles: <https://prez.dev/ManifestResourceRoles/>
+PREFIX schema: <https://schema.org/>
 
 []    a <https://prez.dev/Manifest> ;
     prof:hasResource 
@@ -13,10 +15,20 @@ PREFIX roles: <https://prez.dev/ManifestResourceRoles/>
         ] ,
         [
             prof:hasArtifact
-                "geoacs/euro/ice-detection.ttl" ,
-                "geoacs/euro/lake-detection.ttl" ,
-                "geoacs/euro/river-detection.ttl" ;
+                "geoacs/ogc/buffer.ttl" ,
+                "geoacs/ogc/cloud-removal.ttl" ,
+                "geoacs/ogc/dissolve.ttl" ,
+                "geoacs/ogc/waterbody-detection.ttl" ;
+            prof:hasRole roles:CatalogueData ;
+            schema:additionalType ex:GeoprocessingActivity ;
+        ] ,
+        [
+            prof:hasArtifact
+                "geoacs/cro/dissolve-grasslands.ttl" ,
+                "geoacs/cro/rapid-river-detection.ttl" ,
+                "geoacs/cro/slow-river-detection.ttl" ;
             prof:hasRole roles:ResourceData ;
+            schema:additionalType ex:GeoprocessingActivity ;
         ] ,
         [
             prof:hasArtifact "_background/*.ttl" ;
@@ -27,23 +39,12 @@ PREFIX roles: <https://prez.dev/ManifestResourceRoles/>
             prof:hasRole roles:CatalogueData ;
         ] ,
         [
-            prof:hasArtifact
-                "geoacs/ogc/buffer.ttl" ,
-                "geoacs/ogc/cloud-removal.ttl" ,
-                "geoacs/ogc/dissolve.ttl" ,
-                "geoacs/ogc/waterbody-detection.ttl" ;
+            prof:hasArtifact "geoacs/ogc/_cat.ttl" ;
             prof:hasRole roles:CatalogueData ;
         ] ,
         [
             prof:hasArtifact "geoacs/cro/_cat.ttl" ;
             prof:hasRole roles:CatalogueData ;
-        ] ,
-        [
-            prof:hasArtifact
-                "geoacs/cro/dissolve-grasslands.ttl" ,
-                "geoacs/cro/rapid-river-detection.ttl" ,
-                "geoacs/cro/slow-river-detection.ttl" ;
-            prof:hasRole roles:ResourceData ;
         ] ,
         [
             dcterms:conformsTo <https://linked.data.gov.au/def/vocpub/validator> ;
@@ -53,11 +54,15 @@ PREFIX roles: <https://prez.dev/ManifestResourceRoles/>
             prof:hasRole roles:ResourceData ;
         ] ,
         [
-            prof:hasArtifact "geoacs/euro/_cat.ttl" ;
-            prof:hasRole roles:CatalogueData ;
+            prof:hasArtifact
+                "geoacs/euro/ice-detection.ttl" ,
+                "geoacs/euro/lake-detection.ttl" ,
+                "geoacs/euro/river-detection.ttl" ;
+            prof:hasRole roles:ResourceData ;
+            schema:additionalType ex:GeoprocessingActivity ;
         ] ,
         [
-            prof:hasArtifact "geoacs/ogc/_cat.ttl" ;
+            prof:hasArtifact "geoacs/euro/_cat.ttl" ;
             prof:hasRole roles:CatalogueData ;
         ] ,
         [

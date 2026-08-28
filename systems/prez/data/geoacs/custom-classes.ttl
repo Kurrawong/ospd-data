@@ -1,17 +1,16 @@
 PREFIX cls: <https://def.isotc211.org/class/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX ex: <http://example.org/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-ex:GeoprocessingActivity
-    rdfs:subClassOf
-        dcat:Resource ,
-        cls:RegisterItem ;
-.
 
 ex:TopLevelCatalog
     a rdfs:Class ;
     rdfs:label "Top-level Catalogue" ;
     rdfs:subClassOf dcat:Catalog ;
+.
+
+ex:GeoprocessingActivity
+    rdfs:subClassOf
+        dcat:Resource ,
+        cls:RegisterItem ;
 .
