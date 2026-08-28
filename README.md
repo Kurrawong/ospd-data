@@ -28,5 +28,4 @@ _Data Architect_
 [KurrawongAI](https://kurrawong.ai)  
 <nick@kurrawong.ai> 
 
-You can also leave comments/requests etc. in the [Issue Tracker](https://github.com/Kurrawong/ospd-regcat-profile) 
-for this work.
+You can also leave comments/requests etc. in the [Issue Tracker](https://github.com/Kurrawong/ospd-data) for this work.
