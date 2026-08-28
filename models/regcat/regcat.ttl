@@ -12,8 +12,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 ont:
     a owl:Ontology ;
-    owl:versionIRI <http://example.org/regcat/1.1> ;
-    owl:versionInfo "1.1" ;
+    owl:versionIRI <http://example.org/regcat/1.2> ;
+    owl:versionInfo "1.2" ;
     skos:historyNote "Created for the OGC Open Science Persistent Demonstrator registry catalogue."@en ;
     schema:codeRepository "https://github.com/Kurrawong/ospd-regcat"^^xsd:anyURI ;
     schema:copyrightHolder <https://kurrawong.ai> ;
@@ -48,8 +48,8 @@ ex:RegisteredResource
 ex:qualifiedStatus
     a owl:ObjectProperty ;
     rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-    schema:name "qualified status" ;
-    schema:description "The status of an item with respect to a register" ;
+    skos:prefLabel "qualified status"@en ;
+    skos:definition "The status of an item with respect to a register"@en ;
     skos:scopeNote "Use this predicate to indicate that an item has a status within a register, so the range value should be a Blank Node with predicates schema:value, for the status, and schema:memberOf, for the register" ;
     skos:example "The Ice Detection Geoprocessing Activity has the qualified status of 'valid' within the OGC Standard Geoprocessing Activities Register and 'stable' within the Euro Geoprocessing Activities Register" ;
 .

@@ -14,8 +14,8 @@ ex:GeoprocessingActivity
     rdfs:subClassOf prov:Activity ;
     skos:example "A buffering operation is an instance of Geoprocessing Activity." ;
     skos:historyNote "Defined for the OGC Open Science Persistent Demonstrator registry catalogue." ;
-    schema:description "An activity that performs a geospatial processing operation." ;
-    schema:name "Geoprocessing Activity" ;
+    skos:definition "An activity that performs a geospatial processing operation"@en ;
+    skos:prefLabel "Geoprocessing Activity"@en ;
 .
 
 skos:broader
@@ -23,8 +23,8 @@ skos:broader
     rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
     skos:example "An Ice Detection Geoprocessing Activity may have a Waterbody Detection indicated with this predicate" ;
     skos:scopeNote "Use this predicate to indicate that a Geoprocessing Activity has a more generic version" ;
-    schema:description "Relates a concept to a concept that is more general in meaning." ;
-    schema:name "has broader" ;
+    skos:definition "Relates a concept to a concept that is more general in meaning"@en ;
+    skos:prefLabel "has broader"@en ;
 .
 
 ex:geoac
@@ -34,8 +34,8 @@ ex:geoac
             schema:memberOf demo:models ;
             schema:value istatuses:stable ;
         ] ;
-    owl:versionIRI <http://example.org/geoac/1.0> ;
-    owl:versionInfo "1.0" ;
+    owl:versionIRI <http://example.org/geoac/1.1> ;
+    owl:versionInfo "1.1" ;
     skos:historyNote "Created for the OGC Open Science Persistent Demonstrator registry catalogue." ;
     schema:codeRepository "https://github.com/Kurrawong/ospd-regcat"^^xsd:anyURI ;
     schema:copyrightHolder <https://kurrawong.ai> ;
