@@ -1,7 +1,9 @@
-# OSPD Registry Catalogue Demonstrator
+# OSPD Data
 
-This repository contains a number of resources for the demonstration of a federated set of Geoprocessing Activity 
-registers for the [Open Geospatial Consortium](https://www.ogc.org)'s [Open Science Persistent Demonstrator 2026](https://docs.ogc.org/request/2026/CFP_OSPD_2026.html) program.
+This repository contains the models. vocabularies and demonstration data created by [KurrawongAI](https://kurrawong.ai)
+for the [Open Geospatial Consortium](https://www.ogc.org)'s [Open Science Persistent Demonstrator 2026](https://docs.ogc.org/request/2026/CFP_OSPD_2026.html) program.
+
+
 
 The resources are as follows:
 
