@@ -17,4 +17,5 @@ demo:dissolve-grasslands
         ] ;
     skos:broader demo:dissolve ;
     schema:name "Dissolve Grasslands" ;
+    schema:version "2" ;
 .

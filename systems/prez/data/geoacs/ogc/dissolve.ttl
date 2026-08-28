@@ -11,4 +11,5 @@ demo:dissolve
             schema:value istatus:stable ;
         ] ;
     schema:name "Dissolve" ;
+    schema:version "2" ;
 .

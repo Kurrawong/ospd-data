@@ -11,4 +11,5 @@ demo:cloud-removal
             schema:value istatus:stable ;
         ] ;
     schema:name "Cloud Removal" ;
+    schema:version "2" ;
 .

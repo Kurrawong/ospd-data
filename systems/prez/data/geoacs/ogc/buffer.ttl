@@ -11,4 +11,5 @@ demo:buffer
             schema:value istatus:stable ;
         ] ;
     schema:name "Buffer" ;
+    schema:version "2" ;
 .

@@ -13,4 +13,5 @@ demo:rapid-river-detection
         ] ;
     skos:broader demo:river-detection ;
     schema:name "Rapid River Detection" ;
+    schema:version "2" ;
 .

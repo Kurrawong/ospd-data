@@ -19,4 +19,5 @@ demo:ogc-geoacs
         ] ;
     schema:author <https://kurrawong.ai> ;
     schema:name "OGC Standard Geoprocessing Activities Register" ;
+    schema:version "2" ;
 .

@@ -15,4 +15,5 @@ demo:geoacs
         ] ;
     schema:author <https://kurrawong.ai> ;
     schema:name "Geoprocessing Activities Register" ;
+    schema:version "2" ;
 .

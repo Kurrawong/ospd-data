@@ -15,4 +15,5 @@ demo:vocs
         ] ;
     schema:author <https://kurrawong.ai> ;
     schema:name "Vocabularies Catalogue" ;
+    schema:version "2" ;
 .

@@ -17,4 +17,5 @@ demo:ice-detection
         ] ;
     skos:broader demo:waterbody-detection ;
     schema:name "Ice Detection" ;
+    schema:version "2" ;
 .

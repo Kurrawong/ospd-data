@@ -19,4 +19,5 @@ demo:euro-geoacs
         ] ;
     schema:author <https://kurrawong.ai> ;
     schema:name "Euro Geoprocessing Activities Register" ;
+    schema:version "2" ;
 .

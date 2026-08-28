@@ -11,4 +11,5 @@ demo:waterbody-detection
             schema:value istatus:stable ;
         ] ;
     schema:name "Waterbody Detection" ;
+    schema:version "2" ;
 .

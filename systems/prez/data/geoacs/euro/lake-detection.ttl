@@ -13,4 +13,5 @@ demo:lake-detection
         ] ;
     skos:broader demo:waterbody-detection ;
     schema:name "Lake Detection" ;
+    schema:version "2" ;
 .

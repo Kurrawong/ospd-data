@@ -19,4 +19,5 @@ demo:cro-geoacs
         ] ;
     schema:author <https://kurrawong.ai> ;
     schema:name "Croatian MEPGT Geoprocessing Activities Register" ;
+    schema:version "2" ;
 .

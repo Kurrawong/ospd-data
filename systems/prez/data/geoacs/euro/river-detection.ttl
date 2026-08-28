@@ -13,4 +13,5 @@ demo:river-detection
         ] ;
     skos:broader demo:waterbody-detection ;
     schema:name "River Detection" ;
+    schema:version "2" ;
 .

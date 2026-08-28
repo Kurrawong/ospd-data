@@ -15,4 +15,5 @@ demo:models
         ] ;
     schema:author <https://kurrawong.ai> ;
     schema:name "Models Catalogue" ;
+    schema:version "2" ;
 .
