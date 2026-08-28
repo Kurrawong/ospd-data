@@ -15,9 +15,9 @@ exp:GeoAcDef
         prof:Profile ,
         sh:NodeShape ,
         prez:ObjectProfile ;
-    schema:description "Displays only definitions for Concepts" ;
-    schema:identifier "geoacdef"^^xsd:token ;
-    schema:name "Geoprocessing Activity Default Profile" ;
+    dcterms:description "Displays only definitions for Concepts" ;
+    dcterms:identifier "geoacdef"^^xsd:token ;
+    dcterms:name "Geoprocessing Activity Default Profile" ;
     altr-ext:constrainsClass ex:GeoprocessingActivity ;
     altr-ext:hasDefaultResourceFormat "text/anot+turtle" ;
     altr-ext:hasResourceFormat
@@ -31,14 +31,14 @@ exp:GeoAcDef
                     sh:union (
                         schema:name
                         rdf:type
-                        (
-                            schema:status
-                            schema:value
-                        )
-                        (
-                            schema:status
-                            schema:memberOf
-                        )
+                         (
+                        schema:status
+                        schema:value
+                    )
+                         (
+                        schema:status
+                        schema:memberOf
+                    )
                         skos:broader
                     ) ;
                 ] ;

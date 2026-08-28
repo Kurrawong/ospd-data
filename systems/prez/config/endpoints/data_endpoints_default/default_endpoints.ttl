@@ -1,5 +1,4 @@
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX ex: <http://example.org/>
 PREFIX ont: <https://prez.dev/ont/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
@@ -108,18 +107,31 @@ ex:shape-R0-HL1
                     sh:class ex:GeoprocessingActivity ;
                 ]
             ) ;
-            sh:path [
-                sh:alternativePath (
-                    (
-                        [ sh:inversePath schema:memberOf ]
-                        [ sh:inversePath ex:qualifiedStatus ]
+            sh:path
+                [
+                    sh:alternativePath (
+                         (
+                        
+                        [
+                            sh:inversePath schema:memberOf ;
+                        ]
+                        
+                        [
+                            sh:inversePath ex:qualifiedStatus ;
+                        ]
                     )
-                    (
-                        [ sh:inversePath schema:memberOf ]
-                        [ sh:inversePath ex:qualifiedStatus ]
+                         (
+                        
+                        [
+                            sh:inversePath schema:memberOf ;
+                        ]
+                        
+                        [
+                            sh:inversePath ex:qualifiedStatus ;
+                        ]
                     )
-                ) ;
-            ] ;
+                    ) ;
+                ] ;
         ] ;
     sh:targetClass ex:TopLevelCatalog ;
     ont:hierarchyLevel 1 ;
@@ -130,23 +142,24 @@ ex:shape-R0-HL2
     sh:property
         [
             sh:class dcat:Catalog ;
-            sh:path [
-                sh:alternativePath (
-                    (
+            sh:path
+                [
+                    sh:alternativePath (
+                         (
                         ex:qualifiedStatus
                         schema:memberOf
                     )
-                    (
+                         (
                         ex:qualifiedStatus
                         schema:memberOf
                     )
-                ) ;
-            ] ;
+                    ) ;
+                ] ;
         ] ;
     sh:targetClass
+        owl:Ontology ,
         skos:ConceptScheme ,
-        dcat:Catalog ,
-        owl:Ontology ;
+        dcat:Catalog ;
     ont:hierarchyLevel 2 ;
 .
 
@@ -161,16 +174,17 @@ ex:shape-R0-HL3
             sh:class dcat:Catalog ;
             sh:path (
                 skos:inScheme
+                
                 [
                     sh:alternativePath (
-                        (
-                            ex:qualifiedStatus
-                            schema:memberOf
-                        )
-                        (
-                            ex:qualifiedStatus
-                            schema:memberOf
-                        )
+                         (
+                        ex:qualifiedStatus
+                        schema:memberOf
+                    )
+                         (
+                        ex:qualifiedStatus
+                        schema:memberOf
+                    )
                     ) ;
                 ]
             ) ;
@@ -194,14 +208,14 @@ ex:shape-R0-HL3-1
                 
                 [
                     sh:alternativePath (
-                        (
-                            ex:qualifiedStatus
-                            schema:memberOf
-                        )
-                        (
-                            ex:qualifiedStatus
-                            schema:memberOf
-                        )
+                         (
+                        ex:qualifiedStatus
+                        schema:memberOf
+                    )
+                         (
+                        ex:qualifiedStatus
+                        schema:memberOf
+                    )
                     ) ;
                 ]
             ) ;
@@ -221,48 +235,51 @@ ex:shape-R0-HL3-activity
     a sh:NodeShape ;
     sh:property 
         [
-            sh:class dcat:Catalog ;
-            sh:path [
-                sh:alternativePath (
-                    (
-                        ex:qualifiedStatus
-                        schema:memberOf
-                    )
-                    (
-                        ex:qualifiedStatus
-                        schema:memberOf
-                    )
-                ) ;
-            ] ;
-        ] ,
-        [
             sh:class ex:TopLevelCatalog ;
             sh:path (
+                
                 [
                     sh:alternativePath (
-                        (
-                            ex:qualifiedStatus
-                            schema:memberOf
-                        )
-                        (
-                            ex:qualifiedStatus
-                            schema:memberOf
-                        )
+                         (
+                        ex:qualifiedStatus
+                        schema:memberOf
+                    )
+                         (
+                        ex:qualifiedStatus
+                        schema:memberOf
+                    )
                     ) ;
                 ]
+                
                 [
                     sh:alternativePath (
-                        (
-                            ex:qualifiedStatus
-                            schema:memberOf
-                        )
-                        (
-                            ex:qualifiedStatus
-                            schema:memberOf
-                        )
+                         (
+                        ex:qualifiedStatus
+                        schema:memberOf
+                    )
+                         (
+                        ex:qualifiedStatus
+                        schema:memberOf
+                    )
                     ) ;
                 ]
             ) ;
+        ] ,
+        [
+            sh:class dcat:Catalog ;
+            sh:path
+                [
+                    sh:alternativePath (
+                         (
+                        ex:qualifiedStatus
+                        schema:memberOf
+                    )
+                         (
+                        ex:qualifiedStatus
+                        schema:memberOf
+                    )
+                    ) ;
+                ] ;
         ] ;
     sh:targetClass ex:GeoprocessingActivity ;
     ont:hierarchyLevel 3 ;
