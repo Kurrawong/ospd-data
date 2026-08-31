@@ -219,3 +219,12 @@ schema:value
 schema:version
     schema:name "version" ;
 .
+
+
+<http://purl.org/NET/rdflicense/cc-by4.0>
+    schema:name "Creative Commons CC-BY 4.0" ;
+.
+
+<http://purl.org/NET/rdflicense/APACHE2.0>
+    schema:name "Apache License 2.0" ;
+.
