@@ -1,5 +1,6 @@
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ex: <http://example.org/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prof: <http://www.w3.org/ns/dx/prof/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
@@ -227,4 +228,12 @@ schema:version
 
 <http://purl.org/NET/rdflicense/APACHE2.0>
     schema:name "Apache License 2.0" ;
+.
+
+ex:GeoprocessingActivity
+    schema:name "Geoprocessing Activity" ;
+.
+
+ex:qualifiedStatus
+    schema:name "qualified status" ;
 .
