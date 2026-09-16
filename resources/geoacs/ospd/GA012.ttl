@@ -1,0 +1,25 @@
+PREFIX demo: <http://ospd/demo/>
+PREFIX ex: <http://example.org/>
+PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX schema: <https://schema.org/>
+
+demo:GA012
+    a ex:GeoprocessingActivity ;
+    ex:qualifiedStatus
+        [
+            schema:memberOf demo:ospd-geoacs ;
+            schema:value istatus:experimental ;
+        ] ;
+    prov:qualifiedAttribution
+        [
+            prov:agent
+                [
+                    schema:name "Martin Pontius" ;
+                ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ;
+        ] ;
+    schema:citation <https://en.wikipedia.org/wiki/Soil-adjusted_vegetation_index> ;
+    schema:description "Soil-adjusted vegetation index (SAVI)" ;
+    schema:name "SAVI" ;
+.

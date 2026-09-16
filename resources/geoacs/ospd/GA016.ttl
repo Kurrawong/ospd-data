@@ -1,0 +1,30 @@
+PREFIX demo: <http://ospd/demo/>
+PREFIX ex: <http://example.org/>
+PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+demo:GA016
+    a ex:GeoprocessingActivity ;
+    ex:qualifiedStatus
+        [
+            schema:memberOf demo:ospd-geoacs ;
+            schema:value istatus:experimental ;
+        ] ;
+    skos:related
+        demo:GA012 ,
+        demo:GA013 ,
+        demo:GA014 ,
+        demo:GA015 ;
+    prov:qualifiedAttribution
+        [
+            prov:agent
+                [
+                    schema:name "Martin Pontius" ;
+                ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ;
+        ] ;
+    schema:description "BAP is a Geoprocessing Activity that determines the best available pixel in a satellite imagery time series." ;
+    schema:name "Best available pixel (BAP)" ;
+.

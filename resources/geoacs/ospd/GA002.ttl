@@ -1,0 +1,16 @@
+PREFIX demo: <http://ospd/demo/>
+PREFIX ex: <http://example.org/>
+PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
+PREFIX schema: <https://schema.org/>
+
+demo:GA002
+    a ex:GeoprocessingActivity ;
+    ex:qualifiedStatus
+        [
+            schema:memberOf demo:ospd-geoacs ;
+            schema:value istatus:experimental ;
+        ] ;
+    schema:citation <https://geopandas.org/en/latest/docs/reference/api/geopandas.GeoSeries.boundary.html> ;
+    schema:description "Boundary is a Geoprocessing Activity that returns a polygon containing the vertecies of an input geometry without any interoir rings" ;
+    schema:name "Boundary" ;
+.

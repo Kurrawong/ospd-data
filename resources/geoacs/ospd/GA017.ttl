@@ -1,0 +1,27 @@
+PREFIX demo: <http://ospd/demo/>
+PREFIX ex: <http://example.org/>
+PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+demo:GA017
+    a ex:GeoprocessingActivity ;
+    ex:qualifiedStatus
+        [
+            schema:memberOf demo:ospd-geoacs ;
+            schema:value istatus:experimental ;
+        ] ;
+    skos:related demo:GA016 ;
+    prov:qualifiedAttribution
+        [
+            prov:agent
+                [
+                    schema:name "Martin Pontius" ;
+                ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ;
+        ] ;
+    schema:citation "Hipel, K. W., & McLeod, A. I. (1994). Time series modelling of water resources and environmental systems. Elsevier." ;
+    schema:description "A non-parametric trend detection method designed to measure monotonic trends in time series data that exhibit a seasonal structure." ;
+    schema:name "Seasonal Sen’s Slope" ;
+.

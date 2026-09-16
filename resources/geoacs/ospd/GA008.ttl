@@ -1,0 +1,33 @@
+PREFIX demo: <http://ospd/demo/>
+PREFIX ex: <http://example.org/>
+PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX schema: <https://schema.org/>
+
+demo:GA008
+    a ex:GeoprocessingActivity ;
+    ex:qualifiedStatus
+        [
+            schema:memberOf demo:ospd-geoacs ;
+            schema:value istatus:experimental ;
+        ] ;
+    prov:qualifiedAttribution 
+        [
+            prov:agent
+                [
+                    schema:name "OGC API Processes?" ;
+                ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ;
+        ] ,
+        [
+            prov:agent
+                [
+                    schema:email <mailto:francis.charette-migneault@luqia.ca> ;
+                    schema:name "francis.charette-migneault@luqia.ca" ;
+                ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ;
+        ] ;
+    schema:citation <https://hirondelle.crim.ca/weaver/processes/calculate-band> ;
+    schema:description "Performs a calculation over imagery bands and returns the resulting raster using the specified band arithmetic." ;
+    schema:name "Band Calculation" ;
+.

@@ -1,0 +1,39 @@
+PREFIX demo: <http://ospd/demo/>
+PREFIX ex: <http://example.org/>
+PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+demo:GA009
+    a ex:GeoprocessingActivity ;
+    ex:qualifiedStatus
+        [
+            schema:memberOf demo:ospd-geoacs ;
+            schema:value istatus:experimental ;
+        ] ;
+    skos:related
+        [
+            rdfs:label "STAC MLM" ;
+        ] ;
+    prov:qualifiedAttribution 
+        [
+            prov:agent
+                [
+                    schema:email <mailto:francis.charette-migneault@luqia.ca> ;
+                    schema:name "francis.charette-migneault@luqia.ca" ;
+                ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ;
+        ] ,
+        [
+            prov:agent
+                [
+                    schema:name "STAC MLM?" ;
+                ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ;
+        ] ;
+    schema:citation <https://hirondelle.crim.ca/weaver/processes/unet5> ;
+    schema:description "Performs climate variable downscaling used to transform coarse-scale climate model outputs into high-resolution, locally relevant climate data, using a machine learning algorithm described through STAC MLM." ;
+    schema:name "ML Climate Variable Downscaling" ;
+.

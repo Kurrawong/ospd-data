@@ -70,6 +70,15 @@ PREFIX schema: <https://schema.org/>
             prof:hasRole roles:CatalogueData ;
         ] ,
         [
+            prof:hasArtifact "geoacs/ospd/_cat.ttl" ;
+            prof:hasRole roles:CatalogueData ;
+        ] ,
+        [
+            prof:hasArtifact "geoacs/ospd/*.ttl" ;
+            prof:hasRole roles:ResourceData ;
+            schema:additionalType ex:GeoprocessingActivity ;
+        ] ,
+        [
             prof:hasArtifact "models/_cat.ttl" ;
             prof:hasRole roles:CatalogueData ;
         ] ;

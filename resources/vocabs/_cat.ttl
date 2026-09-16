@@ -1,7 +1,11 @@
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX demo: <http://ospd/demo/>
 PREFIX ex: <http://example.org/>
+PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus>
+PREFIX istatuses: <https://def.isotc211.org/codeset/ItemStatus/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX regrol: <https://def.isotc211.org/codeset/RegisterRolesDemo>
+PREFIX rolecode: <https://def.isotc211.org/codeset/RoleCode>
 PREFIX schema: <https://schema.org/>
 
 demo:vocs
@@ -15,5 +19,29 @@ demo:vocs
         ] ;
     schema:author <https://kurrawong.ai> ;
     schema:name "Vocabularies Catalogue" ;
-    schema:version "2" ;
+    schema:version "3" ;
+.
+
+istatus:
+    ex:qualifiedStatus
+        [
+            schema:memberOf demo:vocs ;
+            schema:value istatuses:stable ;
+        ] ;
+.
+
+regrol:
+    ex:qualifiedStatus
+        [
+            schema:memberOf demo:vocs ;
+            schema:value istatuses:stable ;
+        ] ;
+.
+
+rolecode:
+    ex:qualifiedStatus
+        [
+            schema:memberOf demo:vocs ;
+            schema:value istatuses:stable ;
+        ] ;
 .

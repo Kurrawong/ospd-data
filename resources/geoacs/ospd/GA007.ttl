@@ -1,0 +1,30 @@
+PREFIX demo: <http://ospd/demo/>
+PREFIX ex: <http://example.org/>
+PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX schema: <https://schema.org/>
+
+demo:GA007
+    a ex:GeoprocessingActivity ;
+    ex:qualifiedStatus 
+        [
+            schema:memberOf demo:ospd-geoacs ;
+            schema:value istatus:experimental ;
+        ] ,
+        [
+            schema:memberOf <https://ogcincubator.github.io/bblocks-stac/bblock/ogc.contrib.stac.extensions.mlm-ontology/ontology> ;
+            schema:value istatus:experimental ;
+        ] ;
+    prov:qualifiedAttribution
+        [
+            prov:agent
+                [
+                    schema:name "STAC MLM?" ;
+                ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ;
+        ] ;
+    schema:citation <https://github.com/stac-extensions/mlm> ;
+    schema:description "Predicting a continuous numeric value from input data." ;
+    schema:name "Regression" ;
+    schema:url <https://w3id.org/ogc/stac/mlm/regression> ;
+.

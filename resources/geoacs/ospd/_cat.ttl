@@ -1,0 +1,25 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX demo: <http://ospd/demo/>
+PREFIX ex: <http://example.org/>
+PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX schema: <https://schema.org/>
+
+demo:ospd-geoacs
+    a dcat:Catalog ;
+    ex:qualifiedStatus
+        [
+            schema:memberOf demo:geoacs ;
+            schema:value istatus:experimental ;
+        ] ;
+    prov:qualifiedAttribution
+        [
+            prov:agent <https://defs.opengis.net/org/ogc> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RegisterRolesDemo/register-owner> ;
+        ] ;
+    schema:author <https://kurrawong.ai> ;
+    schema:citation <https://docs.google.com/spreadsheets/d/1myNRKLghCCaTMaoFjfZjqK6D6MYFqtIn8lxUAIkXBjc/edit> ;
+    schema:description "Geoprocessing activity definitions from the OSPD Definitions Register spreadsheet." ;
+    schema:name "Demo OSPD Catalogue" ;
+    schema:version "2" ;
+.

@@ -1,0 +1,31 @@
+PREFIX demo: <http://ospd/demo/>
+PREFIX ex: <http://example.org/>
+PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+demo:GA005
+    a ex:GeoprocessingActivity ;
+    ex:qualifiedStatus
+        [
+            schema:memberOf demo:ospd-geoacs ;
+            schema:value istatus:experimental ;
+        ] ;
+    skos:related demo:GA006 ;
+    prov:qualifiedAttribution 
+        [
+            prov:agent <https://defs.opengis.net/org/ogc> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ;
+        ] ,
+        [
+            prov:agent
+                [
+                    schema:name "Nicholas Car" ;
+                ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ;
+        ] ;
+    schema:citation <https://geopandas.org/en/latest/docs/reference/api/geopandas.GeoSeries.concave_hull.html> ;
+    schema:description "Concave Hull is a Geoprocessing Activity that returns the smallest concave polygon containing all the vertecies in an input geometry, unless the number of vertecies in the input geometry is less than three. For two points, the concave hull collapses to a line; for one, a point." ;
+    schema:name "Concave Hull" ;
+.

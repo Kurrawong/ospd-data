@@ -1,0 +1,15 @@
+PREFIX demo: <http://ospd/demo/>
+PREFIX ex: <http://example.org/>
+PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
+PREFIX schema: <https://schema.org/>
+
+demo:GA010
+    a ex:GeoprocessingActivity ;
+    ex:qualifiedStatus
+        [
+            schema:memberOf demo:ospd-geoacs ;
+            schema:value istatus:experimental ;
+        ] ;
+    schema:description "A Geoprocessing Activity that enhances the spatial resolution of raster imagery." ;
+    schema:name "SEN2SR" ;
+.

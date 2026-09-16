@@ -1,0 +1,18 @@
+PREFIX demo: <http://ospd/demo/>
+PREFIX ex: <http://example.org/>
+PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+demo:GA004
+    a ex:GeoprocessingActivity ;
+    ex:qualifiedStatus
+        [
+            schema:memberOf demo:ospd-geoacs ;
+            schema:value istatus:experimental ;
+        ] ;
+    skos:broader demo:GA002 ;
+    skos:related demo:GA003 ;
+    schema:description "Bounding Circle is a Geoprocessing Activity that returns the smallest circle that contains all the vertecies of an input geometry" ;
+    schema:name "Bounding Circle" ;
+.

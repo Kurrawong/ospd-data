@@ -70,11 +70,6 @@ regrols:submitting-organization
 
 regrol:
     a skos:ConceptScheme ;
-    ex:qualifiedStatus
-        [
-            schema:memberOf demo:vocs ;
-            schema:value istatus:stable ;
-        ] ;
     skos:definition "Roles performed by organisations and other parties in the governance, management, operation and use of registers and registries."@en ;
     skos:hasTopConcept
         regrols:control-body ,
@@ -87,7 +82,8 @@ regrol:
     skos:prefLabel "Register Roles"@en ;
     schema:creator <https://def.isotc211.org/org/tc211> ;
     schema:dateCreated "2026-08-21"^^xsd:date ;
-    schema:dateModified "2026-08-31"^^xsd:date ;
+    schema:dateModified "2026-09-16"^^xsd:date ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:publisher <https://def.isotc211.org/org/tc211> ;
+    schema:version "2" ;
 .

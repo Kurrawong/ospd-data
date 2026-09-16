@@ -1,0 +1,28 @@
+PREFIX demo: <http://ospd/demo/>
+PREFIX ex: <http://example.org/>
+PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX schema: <https://schema.org/>
+
+demo:GA001
+    a ex:GeoprocessingActivity ;
+    ex:qualifiedStatus
+        [
+            schema:memberOf demo:ospd-geoacs ;
+            schema:value istatus:experimental ;
+        ] ;
+    prov:qualifiedAttribution 
+        [
+            prov:agent <https://defs.opengis.net/org/ogc> ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ;
+        ] ,
+        [
+            prov:agent
+                [
+                    schema:name "Nicholas Car" ;
+                ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ;
+        ] ;
+    schema:description "Buffer is a Geoprocessing Activity that creates a zone of a specified distance around or inside an input geometry, such as a point, line, or polygon" ;
+    schema:name "Buffer" ;
+.
