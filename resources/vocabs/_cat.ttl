@@ -18,8 +18,8 @@ demo:vocs
             prov:hadRole <https://def.isotc211.org/codeset/RegisterRolesDemo/register-owner> ;
         ] ;
     schema:author <https://kurrawong.ai> ;
-    schema:name "Vocabularies Catalogue" ;
-    schema:version "3" ;
+    schema:name "Vocabularies Register" ;
+    schema:version "4" ;
 .
 
 istatus:

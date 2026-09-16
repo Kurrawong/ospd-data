@@ -18,8 +18,8 @@ demo:ospd-geoacs
             prov:hadRole <https://def.isotc211.org/codeset/RegisterRolesDemo/register-owner> ;
         ] ;
     schema:author <https://kurrawong.ai> ;
-    schema:citation <https://docs.google.com/spreadsheets/d/1myNRKLghCCaTMaoFjfZjqK6D6MYFqtIn8lxUAIkXBjc/edit> ;
+    schema:citation "OSPD 2026 Google Spreadsheet" ;
     schema:description "Geoprocessing activity definitions from the OSPD Definitions Register spreadsheet." ;
-    schema:name "Demo OSPD Catalogue" ;
+    schema:name "Demo OSPD Register" ;
     schema:version "2" ;
 .

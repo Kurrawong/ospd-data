@@ -29,3 +29,13 @@ PREFIX vann: <http://purl.org/vocab/vann/>
     vann:preferredNamespaceUri "https://def.isotc211.org/codeset/RegisterRolesDemo/" ;
 .
 
+[]
+    vann:preferredNamespacePrefix "rolecode" ;
+    vann:preferredNamespaceUri "https://def.isotc211.org/codeset/RoleCode" ;
+.
+
+[]
+    vann:preferredNamespacePrefix "rolecode" ;
+    vann:preferredNamespaceUri "https://def.isotc211.org/codeset/RoleCode/" ;
+.
+

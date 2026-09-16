@@ -14,6 +14,6 @@ demo:models
             prov:hadRole <https://def.isotc211.org/codeset/RegisterRolesDemo/register-owner> ;
         ] ;
     schema:author <https://kurrawong.ai> ;
-    schema:name "Models Catalogue" ;
-    schema:version "2" ;
+    schema:name "Models Register" ;
+    schema:version "3" ;
 .

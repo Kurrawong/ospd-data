@@ -234,6 +234,14 @@ ex:GeoprocessingActivity
     schema:name "Geoprocessing Activity" ;
 .
 
-ex:qualifiedStatus
+<http://example.org/qualifiedStatus>
     schema:name "qualified status" ;
+.
+
+skos:related
+    schema:name "has related" ;
+.
+
+schema:email
+    schema:name "email" ;
 .
