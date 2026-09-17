@@ -1,3 +1,4 @@
+PREFIX demo: <http://ospd/demo/>
 PREFIX schema: <https://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -30,4 +31,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a schema:Organization ;
     schema:name "Croatian Ministry of Environmental Protection and Green Transition" ;
     schema:url "https://mzozt.gov.hr/"^^xsd:anyURI ;
+.
+
+<https://hartis.org>
+    a schema:Organization ;
+    schema:name "HARTIS Integrated Nautical Services" ;
+    schema:url "https://hartis.org/"^^xsd:anyURI ;
+.
+
+demo:martin-pontius
+    a schema:Person ;
+    schema:name "Martin Pontius" ;
+    schema:email "example@example.com"^^xsd:anyURI ;
 .
