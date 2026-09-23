@@ -1,0 +1,46 @@
+PREFIX demo: <http://ospd/demo/>
+PREFIX ex: <http://example.org/>
+PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+demo:GA041
+    a ex:GeoprocessingActivity ;
+    ex:qualifiedStatus 
+        [
+            schema:memberOf demo:ospd-geoacs ;
+            schema:value istatus:experimental ;
+        ] ,
+        [
+            schema:memberOf demo:enrichment-geoacs ;
+            schema:value istatus:experimental ;
+        ] ;
+    skos:broader demo:GA048 ;
+    skos:related
+        demo:GA039 ,
+        demo:GA040 ;
+    prov:qualifiedAttribution 
+        [
+            prov:agent
+                [
+                    schema:email "abostic@voyagersearch.com"^^xsd:anyURI ;
+                    schema:name "Alex Bostic" ;
+                ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/pointOfContact> ;
+        ] ,
+        [
+            prov:agent
+                [
+                    schema:name "Voyager Search" ;
+                ] ;
+            prov:hadRole <https://def.isotc211.org/codeset/RoleCode/custodian> ;
+        ] ;
+    schema:citation <https://github.com/voyagersearch/voyager-prov-ts/blob/dev/docs/ospd-register-proposal.md> ;
+    schema:dateModified "2026-09-23"^^xsd:date ;
+    schema:description "Place-name mention → coordinate lookup. Consumes the place mentions produced by NLP Entity Extraction and resolves each against an external gazetteer. Produces spatial features from text-derived input, complementing pixel-derived geometry ops." ;
+    schema:name "Geotag" ;
+    schema:url demo:geotag ;
+    schema:version "v1" ;
+.

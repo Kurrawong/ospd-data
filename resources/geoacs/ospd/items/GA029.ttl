@@ -23,10 +23,6 @@ demo:GA029
                     rdfs:label "AI-DGGS workflow" ;
                 ] ;
             schema:value istatus:experimental ;
-        ] ,
-        [
-            schema:memberOf demo:ospd-geoacs ;
-            schema:value istatus:experimental ;
         ] ;
     skos:broader demo:GA033 ;
     skos:related

@@ -25,11 +25,7 @@ demo:GA028
         [
             schema:memberOf demo:ai-dggs-fii-workflow-geoacs ;
             schema:value istatus:experimental ;
-        ] ,
-        [
-            schema:memberOf demo:ospd-geoacs ;
-            schema:value istatus:experimental ;
-        ] ;
+        ]  ;
     skos:broader demo:GA032 ;
     skos:related
         demo:GA026 ,
