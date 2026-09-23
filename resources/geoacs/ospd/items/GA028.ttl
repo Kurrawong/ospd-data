@@ -11,31 +11,19 @@ demo:GA028
     a ex:GeoprocessingActivity ;
     ex:qualifiedStatus 
         [
-            schema:memberOf
-                [
-                    rdfs:label "GRASS GIS" ;
-                ] ;
+            schema:memberOf demo:grass-gis-geoacs ;
             schema:value istatus:experimental ;
         ] ,
         [
-            schema:memberOf
-                [
-                    rdfs:label "GDAL" ;
-                ] ;
+            schema:memberOf demo:gdal-geoacs ;
             schema:value istatus:experimental ;
         ] ,
         [
-            schema:memberOf
-                [
-                    rdfs:label "ArcGIS" ;
-                ] ;
+            schema:memberOf demo:arcgis-geoacs ;
             schema:value istatus:experimental ;
         ] ,
         [
-            schema:memberOf
-                [
-                    rdfs:label "AI-DGGS FII workflow" ;
-                ] ;
+            schema:memberOf demo:ai-dggs-fii-workflow-geoacs ;
             schema:value istatus:experimental ;
         ] ,
         [
@@ -55,5 +43,5 @@ demo:GA028
     schema:dateModified "2026-09-17"^^xsd:date ;
     schema:description "Extracts the value of an input raster, or a defined neighbourhood of raster cells, at each input point location." ;
     schema:name "Raster sampling at points" ;
-    schema:version "2" ;
+    schema:version "3" ;
 .

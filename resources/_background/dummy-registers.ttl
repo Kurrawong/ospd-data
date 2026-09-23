@@ -1,0 +1,18 @@
+PREFIX demo: <http://ospd/demo/>
+PREFIX schema: <https://schema.org/>
+
+demo:ai-dggs-fii-workflow-geoacs
+    schema:name "AI-DGGS FII workflow" ;
+.
+
+demo:grass-gis-geoacs
+    schema:name "GRASS GIS" ;
+.
+
+demo:gdal-geoacs
+    schema:name "GDAL" ;
+.
+
+demo:arcgis-geoacs
+    schema:name "ArcGIS" ;
+.
