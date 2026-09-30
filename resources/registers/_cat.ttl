@@ -1,0 +1,90 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX demo: <http://ospd/demo/>
+PREFIX iso19135: <https://def.isotc211.org/ont/19135/>
+PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
+PREFIX ex: <http://example.org/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX schema: <https://schema.org/>
+
+<http://w3id.org/ogc/reg/top>
+    a
+        ex:TopLevelCatalog ,
+        dcat:Catalog ;
+    iso19135:registerManager <https://defs.opengis.net/org/ogc> ;
+    schema:author <https://kurrawong.ai> ;
+    schema:name "OGC Register of Registers" ;
+    schema:version "3" ;
+.
+
+
+<http://w3id.org/ogc/reg/52north>
+    ex:qualifiedStatus
+        [
+            schema:memberOf <http://w3id.org/ogc/reg/top> ;
+            schema:value istatus:experimental ;
+        ] ;
+.
+
+<http://w3id.org/ogc/reg/arcgis>
+    ex:qualifiedStatus
+        [
+            schema:memberOf <http://w3id.org/ogc/reg/top> ;
+            schema:value istatus:experimental ;
+        ] ;
+.
+
+<http://w3id.org/ogc/reg/crim>
+    ex:qualifiedStatus
+        [
+            schema:memberOf <http://w3id.org/ogc/reg/top> ;
+            schema:value istatus:experimental ;
+        ] ;
+.
+
+<http://w3id.org/ogc/reg/gdal>
+    ex:qualifiedStatus
+        [
+            schema:memberOf <http://w3id.org/ogc/reg/top> ;
+            schema:value istatus:experimental ;
+        ] ;
+.
+
+<http://w3id.org/ogc/reg/geopandas>
+    ex:qualifiedStatus
+        [
+            schema:memberOf <http://w3id.org/ogc/reg/top> ;
+            schema:value istatus:experimental ;
+        ] ;
+.
+
+<http://w3id.org/ogc/reg/grassgis>
+    ex:qualifiedStatus
+        [
+            schema:memberOf <http://w3id.org/ogc/reg/top> ;
+            schema:value istatus:experimental ;
+        ] ;
+.
+
+<http://w3id.org/ogc/reg/hartis>
+    ex:qualifiedStatus
+        [
+            schema:memberOf <http://w3id.org/ogc/reg/top> ;
+            schema:value istatus:experimental ;
+        ] ;
+.
+
+<http://w3id.org/ogc/reg/ogcactivities>
+    ex:qualifiedStatus
+        [
+            schema:memberOf <http://w3id.org/ogc/reg/top> ;
+            schema:value istatus:experimental ;
+        ] ;
+.
+
+<http://w3id.org/ogc/reg/voyager>
+    ex:qualifiedStatus
+        [
+            schema:memberOf <http://w3id.org/ogc/reg/top> ;
+            schema:value istatus:experimental ;
+        ] ;
+.

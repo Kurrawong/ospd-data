@@ -1,0 +1,413 @@
+# Combined ontology (OWL classes/properties + SKOS controlled vocabularies).
+# This is the file actually loaded/published by the register tooling.
+# Kept manually in sync with owl.ttl and skos.ttl — see those files for the maintained source.
+
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+PREFIX iso19135: <http://def.isotc211.org/ont/19135/>
+PREFIX schema: <https://schema.org/>
+PREFIX ex: <http://example.org/>
+PREFIX demo: <http://ospd/demo/>
+PREFIX istatuses: <https://def.isotc211.org/codeset/ItemStatus/>
+
+#################################################################
+# Ontology Metadata
+#################################################################
+
+<http://def.isotc211.org/ont/19135>
+    a owl:Ontology ;
+    dct:title "ISO 19135 Registered Item Model" ;
+    dct:description "A base RDF/OWL and SHACL model for register items, register item classes and register governance metadata, aligned with ISO 19135:2026 (Geographic information — Registration and register governance)." ;
+    dct:creator <https://def.isotc211.org/org/tc211> ;
+    ex:qualifiedStatus
+        [
+            schema:memberOf demo:models ;
+            schema:value istatuses:stable ;
+        ] ;
+    schema:dateModified "2026-09-30"^^xsd:date ;
+.
+    
+
+#################################################################
+# Register, register system and register specification
+#
+# ISO 19135:2026 keeps these three distinct: the register is the governed
+# information; the register system (called "registry" in earlier editions)
+# is merely the platform it runs on; the register specification is the
+# document that states scope, roles, processes and rules. Confusing
+# register with register system is the most common modelling mistake this
+# vocabulary is designed to avoid.
+#################################################################
+
+iso19135:Register a owl:Class ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "Register" ;
+    rdfs:comment "A managed collection of information together with the processes that govern it. A register is distinguished from a plain dataset or database by being governed through defined processes (ISO 19135:2026)." .
+
+iso19135:RegisterSystem a owl:Class ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "Register system" ;
+    rdfs:comment "The information system a register runs on. Called a \"registry\" in editions of ISO 19135 before 2026. Distinct from the register itself, so that custody transfer, mirroring or platform migration do not change what the register is." .
+
+iso19135:RegisterSpecification a owl:Class ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "Register specification" ;
+    rdfs:comment "The document that states a register's purpose, scope, roles, processes, content requirements, identifier and versioning schemes, proposer eligibility criteria, and the register's definition of a substantive change. The single most important artefact in the ISO 19135:2026 model." .
+
+iso19135:runsOn a owl:ObjectProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "runs on" ;
+    rdfs:comment "Relates a register to the register system that hosts it." ;
+    rdfs:domain iso19135:Register ;
+    rdfs:range iso19135:RegisterSystem .
+
+iso19135:hasSpecification a owl:ObjectProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "has specification" ;
+    rdfs:comment "Relates a register to the register specification that documents its governance." ;
+    rdfs:domain iso19135:Register ;
+    rdfs:range iso19135:RegisterSpecification .
+
+iso19135:definesSubstantiveChange a owl:DatatypeProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "defines substantive change" ;
+    rdfs:comment "Free-text statement, required by ISO 19135:2026 to be documented in the register specification, of what counts as a substantive (as opposed to clarifying) change for this register." ;
+    rdfs:domain iso19135:RegisterSpecification ;
+    rdfs:range xsd:string .
+
+#################################################################
+# Governance roles
+#
+# ISO 19135:2026 defines six roles. One party may hold several. Modelled
+# as direct properties from Register (or, for the proposer, from
+# RegisterAction) to prov:Agent so that any register's own schema for
+# "maintainer", "editor", "submitted by" etc. can be mapped onto a single
+# shared property with a single JSON-LD context entry.
+#################################################################
+
+iso19135:registerOwner a owl:ObjectProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "register owner" ;
+    rdfs:comment "Party with ultimate responsibility for the register: creates the register specification, appoints the other roles, sets proposer eligibility, access terms, process time limits and the appeal procedure." ;
+    rdfs:domain iso19135:Register ;
+    rdfs:range prov:Agent .
+
+iso19135:registerManager a owl:ObjectProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "register manager" ;
+    rdfs:comment "Party responsible for content governance: receives proposals, verifies eligibility, forwards them to the control body, implements approved changes and informs proposers. Procedural, not a content-decision role." ;
+    rdfs:domain iso19135:Register ;
+    rdfs:range prov:Agent .
+
+iso19135:controlBody a owl:ObjectProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "control body" ;
+    rdfs:comment "Subject-matter experts who decide whether proposed content changes are approved, and who publish and maintain the acceptance criteria for the item classes they govern." ;
+    rdfs:domain iso19135:Register ;
+    rdfs:range prov:Agent .
+
+iso19135:registerSystemManager a owl:ObjectProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "register system manager" ;
+    rdfs:comment "Party that manages the register system (the information system), as distinct from the register's content. Called \"registry manager\" in editions of ISO 19135 before 2026." ;
+    rdfs:domain iso19135:Register ;
+    rdfs:range prov:Agent .
+
+iso19135:registerUser a owl:ObjectProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "register user" ;
+    rdfs:comment "A party recognised as accessing the register's content, potentially at a differentiated access level." ;
+    rdfs:domain iso19135:Register ;
+    rdfs:range prov:Agent .
+
+iso19135:proposer a owl:ObjectProperty ;
+    rdfs:subPropertyOf prov:wasAssociatedWith ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "proposer" ;
+    rdfs:comment "Party that proposed a register action: may clarify on request and may withdraw the proposal at any time before a decision is made. Also called \"register change proposer\" or, in editions of ISO 19135 before 2026, \"submitting organization\"." ;
+    rdfs:domain iso19135:RegisterAction ;
+    rdfs:range prov:Agent .
+
+#################################################################
+# Content plane: register item classes and register items
+#
+# The register item class is the unit that data requirements and
+# validation rules attach to. The register item is the concrete record.
+# A register that has no concept plane (a "content register", the
+# lightest of the five ISO 19135:2026 conformant register types) still
+# has register items — so name/definition are carried directly on the
+# item as well as, optionally, via a realised concept version.
+#################################################################
+
+iso19135:RegisterItemClass a owl:Class ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "Register item class" ;
+    rdfs:comment "A defined abstraction of a set of register items sharing common characteristics. Carries the data requirements for those items; this is the unit that validation rules attach to." .
+
+iso19135:RegisterItem a owl:Class ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "Register item" ;
+    rdfs:comment "The concrete data held in a register's content plane. Realises a concept version where the register maintains a concept plane; stands alone, with its own name and definition, in a content-only register." .
+
+iso19135:inRegister a owl:ObjectProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "in register" ;
+    rdfs:comment "Relates a register item to the register that holds it." ;
+    rdfs:domain iso19135:RegisterItem ;
+    rdfs:range iso19135:Register .
+
+iso19135:definedIn a owl:ObjectProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "defined in" ;
+    rdfs:comment "Relates a register item class to the register that defines it. A register item class may be reused across registers; this records where it originates." ;
+    rdfs:domain iso19135:RegisterItemClass ;
+    rdfs:range iso19135:Register .
+
+iso19135:itemClass a owl:ObjectProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "item class" ;
+    rdfs:comment "Relates a register item to the register item class it belongs to. Every register item has exactly one item class; validation rules are attached at this level." ;
+    rdfs:domain iso19135:RegisterItem ;
+    rdfs:range iso19135:RegisterItemClass .
+
+iso19135:validatedBy a owl:ObjectProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "validated by" ;
+    rdfs:comment "Points from a register item class to the executable rule set (for example a SHACL shape published as an OGC Building Block) that expresses its data requirements." ;
+    rdfs:domain iso19135:RegisterItemClass ;
+    rdfs:range rdfs:Resource .
+
+#################################################################
+# Identifiers
+#
+# ISO 19135:2026 treats the object/functional distinction as a first-class
+# primitive, not an implementation detail: an object identifier never
+# redirects; a functional identifier is redirectable and keeps pointing at
+# "the current version" or similar. Modelled here as plain datatype
+# properties so any schema's own id/URI field maps onto them directly.
+#################################################################
+
+iso19135:objectIdentifier a owl:DatatypeProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "object identifier" ;
+    rdfs:comment "An identifier permanently bound to one object; it never redirects and never comes to refer to something else." ;
+    rdfs:domain [ owl:unionOf (iso19135:RegisterItem iso19135:ConceptVersion) ] ;
+    rdfs:range xsd:anyURI .
+
+iso19135:functionalIdentifier a owl:DatatypeProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "functional identifier" ;
+    rdfs:comment "A redirectable identifier: what it resolves to may change over time so that it continues to serve its original intent, for example \"the current version of this concept\"." ;
+    rdfs:domain [ owl:unionOf (iso19135:RegisterItem iso19135:ConceptVersion) ] ;
+    rdfs:range xsd:anyURI .
+
+#################################################################
+# Statuses
+#
+# Independent concerns, not one mutually-exclusive list. The required
+# core is validity and publication; redaction and deletion are optional,
+# documented, per-register choices. Enumerated values are SKOS concepts
+# from the schemes in skos.ttl (iso19135:ValidityStatus / iso19135:PublicationStatus
+# are the classes those individuals belong to).
+#################################################################
+
+iso19135:ValidityStatus a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "Validity status" ;
+    rdfs:comment "Whether a register item or concept version is currently valid or invalid. Required." .
+
+iso19135:PublicationStatus a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "Publication status" ;
+    rdfs:comment "Whether a register item or concept version is currently published (visible) or unpublished. Required, and independent of validity — a valid item need not be published, and what earlier editions called \"retired\" is the combination valid + unpublished." .
+
+iso19135:validityStatus a owl:ObjectProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "validity status" ;
+    rdfs:domain [ owl:unionOf (iso19135:RegisterItem iso19135:ConceptVersion) ] ;
+    rdfs:range iso19135:ValidityStatus .
+
+iso19135:publicationStatus a owl:ObjectProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "publication status" ;
+    rdfs:domain [ owl:unionOf (iso19135:RegisterItem iso19135:ConceptVersion) ] ;
+    rdfs:range iso19135:PublicationStatus .
+
+iso19135:isRedacted a owl:DatatypeProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "is redacted" ;
+    rdfs:comment "Optional flag; the register owner decides and documents in the register specification whether this register uses redaction at all." ;
+    rdfs:domain [ owl:unionOf (iso19135:RegisterItem iso19135:ConceptVersion) ] ;
+    rdfs:range xsd:boolean .
+
+iso19135:isDeleted a owl:DatatypeProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "is deleted" ;
+    rdfs:comment "Optional flag; the register owner decides and documents in the register specification whether this register uses deletion at all." ;
+    rdfs:domain [ owl:unionOf (iso19135:RegisterItem iso19135:ConceptVersion) ] ;
+    rdfs:range xsd:boolean .
+
+#################################################################
+# Relations
+#
+# Relations are extensible by design in ISO 19135:2026 (supersession is
+# expressed as a relation, not a status). Modelled as plain object
+# properties rather than a reified relation class, so a register can add
+# a narrower named relation simply by declaring it a sub-property of
+# iso19135:relatedItem in its own ontology.
+#################################################################
+
+iso19135:relatedItem a owl:ObjectProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "related item" ;
+    rdfs:comment "Generic, extensible relation between two register items. Registers define more specific relations (for example iso19135:supersededBy, or their own) as sub-properties of this one." ;
+    rdfs:domain iso19135:RegisterItem ;
+    rdfs:range iso19135:RegisterItem .
+
+iso19135:supersededBy a owl:ObjectProperty ;
+    rdfs:subPropertyOf iso19135:relatedItem ;
+    owl:inverseOf iso19135:supersedes ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "superseded by" ;
+    rdfs:comment "Relates a register item to the register item that replaces it. Supersession is a relation, not a status: a superseded item may still be valid." ;
+    rdfs:domain iso19135:RegisterItem ;
+    rdfs:range iso19135:RegisterItem .
+
+iso19135:supersedes a owl:ObjectProperty ;
+    rdfs:subPropertyOf iso19135:relatedItem ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "supersedes" ;
+    rdfs:domain iso19135:RegisterItem ;
+    rdfs:range iso19135:RegisterItem .
+
+#################################################################
+# Actions and change classification
+#
+# Modelled as a subclass of prov:Activity: a register action is something
+# that happens, associated with an agent (the proposer, or whoever
+# implemented it), at a time, applying to an item. actionType and
+# changeClassification take their values from the SKOS schemes in
+# skos.ttl.
+#################################################################
+
+iso19135:RegisterActionType a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "Register action type" ;
+    rdfs:comment "The kind of change a register action makes: addition, publication, unpublication, invalidation, supersession, redaction or deletion. Extensible; a register may define further action types." .
+
+iso19135:ChangeClassification a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "Change classification" ;
+    rdfs:comment "Whether a change is substantive (major impact on use, typically altering semantics), clarifying/non-substantive (minor, editorial), or correctional (available only in the most capable register types, for correcting the record itself). The register specification must document what counts as substantive for that register." .
+
+iso19135:RegisterAction a owl:Class ;
+    rdfs:subClassOf prov:Activity ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "Register action" ;
+    rdfs:comment "A defined, recorded way in which register content changes. Every decision — automated or human — produces a retained record: who or what decided, under which rule set version, when, and on what justification." .
+
+iso19135:actionType a owl:ObjectProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "action type" ;
+    rdfs:domain iso19135:RegisterAction ;
+    rdfs:range iso19135:RegisterActionType .
+
+iso19135:changeClassification a owl:ObjectProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "change classification" ;
+    rdfs:domain iso19135:RegisterAction ;
+    rdfs:range iso19135:ChangeClassification .
+
+iso19135:appliesTo a owl:ObjectProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "applies to" ;
+    rdfs:comment "Relates a register action to the register item it acted upon." ;
+    rdfs:domain iso19135:RegisterAction ;
+    rdfs:range iso19135:RegisterItem .
+
+iso19135:hasAction a owl:ObjectProperty ;
+    owl:inverseOf iso19135:appliesTo ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "has action" ;
+    rdfs:comment "Relates a register item to a recorded action performed on it." ;
+    rdfs:domain iso19135:RegisterItem ;
+    rdfs:range iso19135:RegisterAction .
+
+#################################################################
+# Concept plane
+#
+# Present only in register types that maintain one (concept, governed
+# concept and comprehensive concept registers). Reuses SKOS directly:
+# iso19135:Concept and iso19135:ConceptSystem are subclasses of skos:Concept and
+# skos:ConceptScheme, so skos:inScheme, skos:prefLabel etc. apply as-is.
+#################################################################
+
+iso19135:ConceptSystem a owl:Class ;
+    rdfs:subClassOf skos:ConceptScheme ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "Concept system" ;
+    rdfs:comment "A collection of related concepts maintained by a register's concept plane." .
+
+iso19135:Concept a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "Concept" ;
+    rdfs:comment "A unit of meaning, independent of how it is represented. Use skos:inScheme to relate a concept to its iso19135:ConceptSystem, and skos:prefLabel/skos:definition for its label and definition." .
+
+iso19135:ConceptVersion a owl:Class ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "Concept version" ;
+    rdfs:comment "A version of a concept. Concept versions, not concepts themselves, carry validity and publication status: a concept's meaning can be stable while a particular version of it is superseded." .
+
+iso19135:versionOf a owl:ObjectProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "version of" ;
+    rdfs:domain iso19135:ConceptVersion ;
+    rdfs:range iso19135:Concept .
+
+iso19135:realizes a owl:ObjectProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "realizes" ;
+    rdfs:comment "Relates a register item, in the content plane, to the concept version it represents, in the concept plane. Separating the two lets a register evolve what something means independently of how it is represented." ;
+    rdfs:domain iso19135:RegisterItem ;
+    rdfs:range iso19135:ConceptVersion .
+
+#################################################################
+# Commitments
+#
+# The "promise layer": what a register commits to its users about
+# access, persistence/integrity/traceability, and transparency. Modelled
+# so that a register specification's promises are themselves queryable
+# and assessable.
+#################################################################
+
+iso19135:CommitmentCategory a owl:Class ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "Commitment category" ;
+    rdfs:comment "One of the three groups of commitment a register may make: access; persistence, integrity and traceability; or transparency." .
+
+iso19135:Commitment a owl:Class ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "Commitment" ;
+    rdfs:comment "A specific, documented promise a register makes to its users, against which it can be assessed. Use dct:description for the promise text." .
+
+iso19135:commitmentCategory a owl:ObjectProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "commitment category" ;
+    rdfs:domain iso19135:Commitment ;
+    rdfs:range iso19135:CommitmentCategory .
+
+iso19135:hasCommitment a owl:ObjectProperty ;
+    rdfs:isDefinedBy iso19135: ;
+    rdfs:label "has commitment" ;
+    rdfs:domain iso19135:Register ;
+    rdfs:range iso19135:Commitment .

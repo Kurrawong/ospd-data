@@ -1,6 +1,11 @@
-PREFIX demo: <http://ospd/demo/>
 PREFIX schema: <https://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://52north.org>
+    a schema:Organization ;
+    schema:name "52north" ;
+    schema:url "https://52north.org"^^xsd:anyURI ;
+.
 
 <https://def.isotc211.org/org/tc211>
     a schema:Organization ;
@@ -15,10 +20,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "https://www.ogc.org/"^^xsd:anyURI ;
 .
 
-<https://eea>
+<https://hartis.org>
     a schema:Organization ;
-    schema:name "European Environment Agency" ;
-    schema:url "https://www.eea.europa.eu/en"^^xsd:anyURI ;
+    schema:name "HARTIS Integrated Nautical Services" ;
+    schema:url "https://hartis.org/"^^xsd:anyURI ;
 .
 
 <https://kurrawong.ai>
@@ -27,20 +32,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "https://kurrawong.ai"^^xsd:anyURI ;
 .
 
-<https://mepgt>
+<https://www.crim.ca>
     a schema:Organization ;
-    schema:name "Croatian Ministry of Environmental Protection and Green Transition" ;
-    schema:url "https://mzozt.gov.hr/"^^xsd:anyURI ;
+    schema:name "CRIM" ;
+    schema:url "https://www.crim.ca/fr/"^^xsd:anyURI ;
 .
 
-<https://hartis.org>
+<https://www.voyagersearch.com>
     a schema:Organization ;
-    schema:name "HARTIS Integrated Nautical Services" ;
-    schema:url "https://hartis.org/"^^xsd:anyURI ;
-.
-
-demo:martin-pontius
-    a schema:Person ;
-    schema:name "Martin Pontius" ;
-    schema:email "example@example.com"^^xsd:anyURI ;
+    schema:name "Voyager" ;
+    schema:url "https://www.voyagersearch.com"^^xsd:anyURI ;
 .

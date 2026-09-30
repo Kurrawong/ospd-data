@@ -3,6 +3,7 @@ PREFIX ex: <http://example.org/>
 PREFIX prof: <http://www.w3.org/ns/dx/prof/>
 PREFIX roles: <https://prez.dev/ManifestResourceRoles/>
 PREFIX schema: <https://schema.org/>
+PREFIX iso19135: <http://def.isotc211.org/ont/19135/>
 
 []    a <https://prez.dev/Manifest> ;
     prof:hasResource
@@ -11,13 +12,8 @@ PREFIX schema: <https://schema.org/>
             prof:hasRole roles:CompleteCatalogueAndResourceLabels ;
         ] ,
         [
-            prof:hasArtifact "geoacs/_cat.ttl" ;
+            prof:hasArtifact "registers/_cat.ttl" ;
             prof:hasRole roles:CatalogueData ;
-        ] ,
-        [
-            prof:hasArtifact "geoacs/items/*.ttl" ;
-            prof:hasRole roles:ResourceData ;
-            schema:additionalType ex:GeoprocessingActivity ;
         ] ,
         [
             prof:hasArtifact "models/_cat.ttl" ;
@@ -31,6 +27,10 @@ PREFIX schema: <https://schema.org/>
             prof:hasRole roles:ResourceData ;
         ] ,
         [
+            prof:hasArtifact "models/iso19135.ttl" ;
+            prof:hasRole roles:ResourceData ;
+        ] ,
+        [
             prof:hasArtifact "vocabs/_cat.ttl" ;
             prof:hasRole roles:CatalogueData ;
         ] ,
@@ -40,5 +40,86 @@ PREFIX schema: <https://schema.org/>
                 "vocabs/RegisterItemStatus.ttl" ,
                 "vocabs/RegisterRolesDemo.ttl" ;
             prof:hasRole roles:ResourceData ;
+        ] ,
+        [
+            prof:hasArtifact "registers/52north/_cat.ttl" ;
+            prof:hasRole roles:CatalogueData ;
+        ] ,
+        [
+            prof:hasArtifact "registers/52north/items/*.ttl" ;
+            prof:hasRole roles:ResourceData ;
+            schema:additionalType iso19135:RegisterItem ;
+        ] ,
+        [
+            prof:hasArtifact "registers/arcgis/_cat.ttl" ;
+            prof:hasRole roles:CatalogueData ;
+        ] ,
+        [
+            prof:hasArtifact "registers/arcgis/items/*.ttl" ;
+            prof:hasRole roles:ResourceData ;
+            schema:additionalType iso19135:RegisterItem ;
+        ] ,
+        [
+            prof:hasArtifact "registers/crim/_cat.ttl" ;
+            prof:hasRole roles:CatalogueData ;
+        ] ,
+        [
+            prof:hasArtifact "registers/crim/items/*.ttl" ;
+            prof:hasRole roles:ResourceData ;
+            schema:additionalType iso19135:RegisterItem ;
+        ] ,
+        [
+            prof:hasArtifact "registers/gdal/_cat.ttl" ;
+            prof:hasRole roles:CatalogueData ;
+        ] ,
+        [
+            prof:hasArtifact "registers/gdal/items/*.ttl" ;
+            prof:hasRole roles:ResourceData ;
+            schema:additionalType iso19135:RegisterItem ;
+        ] ,
+        [
+            prof:hasArtifact "registers/geopandas/_cat.ttl" ;
+            prof:hasRole roles:CatalogueData ;
+        ] ,
+        [
+            prof:hasArtifact "registers/geopandas/items/*.ttl" ;
+            prof:hasRole roles:ResourceData ;
+            schema:additionalType iso19135:RegisterItem ;
+        ] ,
+        [
+            prof:hasArtifact "registers/grassgis/_cat.ttl" ;
+            prof:hasRole roles:CatalogueData ;
+        ] ,
+        [
+            prof:hasArtifact "registers/grassgis/items/*.ttl" ;
+            prof:hasRole roles:ResourceData ;
+            schema:additionalType iso19135:RegisterItem ;
+        ] ,
+        [
+            prof:hasArtifact "registers/hartis/_cat.ttl" ;
+            prof:hasRole roles:CatalogueData ;
+        ] ,
+        [
+            prof:hasArtifact "registers/hartis/items/*.ttl" ;
+            prof:hasRole roles:ResourceData ;
+            schema:additionalType iso19135:RegisterItem ;
+        ] ,
+        [
+            prof:hasArtifact "registers/ogcactivities/_cat.ttl" ;
+            prof:hasRole roles:CatalogueData ;
+        ] ,
+        [
+            prof:hasArtifact "registers/ogcactivities/items/*.ttl" ;
+            prof:hasRole roles:ResourceData ;
+            schema:additionalType iso19135:RegisterItem ;
+        ] ,
+        [
+            prof:hasArtifact "registers/voyager/_cat.ttl" ;
+            prof:hasRole roles:CatalogueData ;
+        ] ,
+        [
+            prof:hasArtifact "registers/voyager/items/*.ttl" ;
+            prof:hasRole roles:ResourceData ;
+            schema:additionalType iso19135:RegisterItem ;
         ] ;
 .

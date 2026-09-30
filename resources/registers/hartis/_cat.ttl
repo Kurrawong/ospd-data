@@ -1,0 +1,12 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX iso19135: <http://def.isotc211.org/ont/19135/>
+PREFIX schema: <https://schema.org/>
+
+<http://w3id.org/ogc/reg/hartis>
+    a
+        iso19135:Register ,
+        dcat:Catalog ;
+    iso19135:registerManager <https://hartis.org> ;
+    schema:name "HARTIS Register" ;
+    schema:version "1" ;
+.

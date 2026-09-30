@@ -245,3 +245,27 @@ skos:related
 schema:email
     schema:name "email" ;
 .
+
+<https://prez.dev/ManifestResourceRoles/CatalogueData>
+    schema:name "Catalogue Data" ;
+.
+
+<https://prez.dev/ManifestResourceRoles/CompleteCatalogueAndResourceLabels>
+    schema:name "Complete Catalogue and Resource Labels" ;
+.
+
+<https://prez.dev/ManifestResourceRoles/ResourceData>
+    schema:name "Resource Data" ;
+.
+
+<https://def.isotc211.org/ont/19135/registerManager>
+    schema:name "Register Manager" ;
+.
+
+<https://def.isotc211.org/codeset/RoleCode/pointOfContact>
+    schema:name "point of contact" ;
+.
+
+<http://ospd/demo/martin-pontius>
+    schema:name "Martin Pontius" ;
+.

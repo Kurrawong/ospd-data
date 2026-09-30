@@ -39,3 +39,8 @@ PREFIX vann: <http://purl.org/vocab/vann/>
     vann:preferredNamespaceUri "https://def.isotc211.org/codeset/RoleCode/" ;
 .
 
+[]
+    vann:preferredNamespacePrefix "iso19135" ;
+    vann:preferredNamespaceUri "https://def.isotc211.org/ont/19135/" ;
+.
+
