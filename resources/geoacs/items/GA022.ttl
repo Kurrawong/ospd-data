@@ -9,23 +9,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 demo:GA022
     a ex:GeoprocessingActivity ;
-    ex:qualifiedStatus 
-        [
-            schema:memberOf demo:grass-gis-geoacs ;
-            schema:value istatus:experimental ;
-        ] ,
-        [
-            schema:memberOf demo:gdal-geoacs ;
-            schema:value istatus:experimental ;
-        ] ,
+    ex:qualifiedStatus
         [
             schema:memberOf demo:arcgis-geoacs ;
             schema:value istatus:experimental ;
-        ] ,
-        [
-            schema:memberOf demo:ai-dggs-fii-workflow-geoacs ;
-            schema:value istatus:experimental ;
-        ]  ;
+        ] ;
     skos:broader demo:GA031 ;
     skos:related 
         demo:GA034 ,

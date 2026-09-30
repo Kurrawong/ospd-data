@@ -9,7 +9,7 @@ demo:GA036
     a ex:GeoprocessingActivity ;
     ex:qualifiedStatus
         [
-            schema:memberOf demo:ospd-geoacs ;
+            schema:memberOf demo:ogc-dggs ;
             schema:value istatus:experimental ;
         ] ;
     prov:qualifiedAttribution

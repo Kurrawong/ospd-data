@@ -11,17 +11,7 @@ demo:GA029
     a ex:GeoprocessingActivity ;
     ex:qualifiedStatus 
         [
-            schema:memberOf
-                [
-                    rdfs:label "OGC DGGS" ;
-                ] ;
-            schema:value istatus:experimental ;
-        ] ,
-        [
-            schema:memberOf
-                [
-                    rdfs:label "AI-DGGS workflow" ;
-                ] ;
+            schema:memberOf demo:ogc-dggs ;
             schema:value istatus:experimental ;
         ] ;
     skos:broader demo:GA033 ;

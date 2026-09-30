@@ -11,23 +11,7 @@ demo:GA024
     a ex:GeoprocessingActivity ;
     ex:qualifiedStatus 
         [
-            schema:memberOf demo:ai-dggs-fii-workflow-geoacs ;
-            schema:value istatus:experimental ;
-        ] ,
-        [
-            schema:memberOf demo:ospd-geoacs ;
-            schema:value istatus:experimental ;
-        ] ,
-        [
             schema:memberOf demo:grass-gis-geoacs ;
-            schema:value istatus:experimental ;
-        ] ,
-        [
-            schema:memberOf demo:gdal-geoacs ;
-            schema:value istatus:experimental ;
-        ] ,
-        [
-            schema:memberOf demo:arcgis-geoacs ;
             schema:value istatus:experimental ;
         ] ;
     skos:broader demo:GA031 ;

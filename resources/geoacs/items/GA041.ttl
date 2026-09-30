@@ -10,10 +10,6 @@ demo:GA041
     a ex:GeoprocessingActivity ;
     ex:qualifiedStatus 
         [
-            schema:memberOf demo:ospd-geoacs ;
-            schema:value istatus:experimental ;
-        ] ,
-        [
             schema:memberOf demo:enrichment-geoacs ;
             schema:value istatus:experimental ;
         ] ;
