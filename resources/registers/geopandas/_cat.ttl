@@ -1,5 +1,5 @@
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX iso19135: <http://def.isotc211.org/ont/19135/>
+PREFIX iso19135: <https://def.isotc211.org/ont/19135/>
 PREFIX schema: <https://schema.org/>
 
 <http://w3id.org/ogc/reg/geopandas>

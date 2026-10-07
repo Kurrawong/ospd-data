@@ -1,6 +1,6 @@
 PREFIX demo: <http://ospd/demo/>
 PREFIX ex: <http://example.org/>
-PREFIX iso19135: <http://def.isotc211.org/ont/19135/>
+PREFIX iso19135: <https://def.isotc211.org/ont/19135/>
 PREFIX istatus: <https://def.isotc211.org/codeset/ItemStatus/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>

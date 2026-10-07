@@ -3,7 +3,7 @@ PREFIX ex: <http://example.org/>
 PREFIX prof: <http://www.w3.org/ns/dx/prof/>
 PREFIX roles: <https://prez.dev/ManifestResourceRoles/>
 PREFIX schema: <https://schema.org/>
-PREFIX iso19135: <http://def.isotc211.org/ont/19135/>
+PREFIX iso19135: <https://def.isotc211.org/ont/19135/>
 
 []    a <https://prez.dev/Manifest> ;
     prof:hasResource
