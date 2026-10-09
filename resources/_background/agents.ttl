@@ -1,3 +1,4 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX schema: <https://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -34,8 +35,77 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <https://www.crim.ca>
     a schema:Organization ;
+    dcterms:isReplacedBy <https://www.luqia.ca> ;
+    schema:alternateName "Centre de recherche informatique de Montréal"@fr , "Computer Research Institute of Montréal"@en ;
+    schema:areaServed "Québec, Canada" ;
+    schema:description "Non-profit applied research centre in Montréal specialised in artificial intelligence, data science and geospatial technologies. Merged with the National Optics Institute (INO) in April 2026 to form Luqia." ;
+    schema:dissolutionDate "2026-04"^^xsd:gYearMonth ;
+    schema:location
+        [
+            a schema:Place ;
+            schema:address
+                [
+                    a schema:PostalAddress ;
+                    schema:addressCountry "CA" ;
+                    schema:addressLocality "Montréal" ;
+                    schema:addressRegion "QC" ;
+                ] ;
+        ] ;
     schema:name "CRIM" ;
+    schema:subjectOf
+        [
+            a schema:WebPage ;
+            schema:inLanguage "fr" ;
+            schema:url "https://www.crim.ca/fr/"^^xsd:anyURI ;
+        ] ,
+        [
+            a schema:WebPage ;
+            schema:inLanguage "en" ;
+            schema:url "https://www.crim.ca/en/"^^xsd:anyURI ;
+        ] ;
     schema:url "https://www.crim.ca/fr/"^^xsd:anyURI ;
+.
+
+<https://www.luqia.ca>
+    a schema:Organization ;
+    dcterms:replaces <https://www.crim.ca> , <https://www.ino.ca> ;
+    schema:alternateName "Technologies Luqia" , "Luqia" ;
+    schema:description "Canada's largest industrial innovation laboratory for artificial intelligence, photonics and quantum technologies, formed from the merger of CRIM and INO. Main hubs in Montréal (AI) and Québec City (photonics)." ;
+    schema:employee <https://orcid.org/0000-0003-4862-3349> ;
+    schema:foundingDate "2026-04"^^xsd:gYearMonth ;
+    schema:name "Luqia" ;
+    schema:subjectOf
+        [
+            a schema:WebPage ;
+            schema:inLanguage "fr" ;
+            schema:url "https://www.luqia.ca/"^^xsd:anyURI ;
+        ] ,
+        [
+            a schema:WebPage ;
+            schema:inLanguage "en" ;
+            schema:url "https://www.luqia.ca/en/"^^xsd:anyURI ;
+        ] ;
+    schema:url "https://www.luqia.ca/"^^xsd:anyURI ;
+.
+
+<https://www.ino.ca>
+    a schema:Organization ;
+    dcterms:isReplacedBy <https://www.luqia.ca> ;
+    schema:alternateName "Institut national d'optique"@fr , "National Optics Institute"@en ;
+    schema:dissolutionDate "2026-04"^^xsd:gYearMonth ;
+    schema:name "INO" ;
+    schema:subjectOf
+        [
+            a schema:WebPage ;
+            schema:inLanguage "fr" ;
+            schema:url "https://www.ino.ca/fr/"^^xsd:anyURI ;
+        ] ,
+        [
+            a schema:WebPage ;
+            schema:inLanguage "en" ;
+            schema:url "https://www.ino.ca/en/"^^xsd:anyURI ;
+        ] ;
+    schema:url "https://www.ino.ca/fr/"^^xsd:anyURI ;
 .
 
 <https://www.voyagersearch.com>
