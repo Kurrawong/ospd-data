@@ -7,6 +7,8 @@ PREFIX schema: <https://schema.org/>
         iso19135:Register ,
         dcat:Catalog ;
     iso19135:registerManager <https://www.crim.ca> ;
-    schema:name "Crim Register" ;
-    schema:version "1" ;
+    schema:name "CRIM Register" ;
+    schema:description "Geoprocessing activities published by CRIM (Computer Research Institute of Montréal), now part of Luqia." ;
+    schema:provider <https://www.luqia.ca> ;
+    schema:version "2" ;
 .
